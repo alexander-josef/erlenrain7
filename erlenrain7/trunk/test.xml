@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Case 10337: CD Bestellung Team 403</title>
+        <link>http://bugz.unartig.ch</link>
+        <description>FogBugz RSS Feed</description>
+        <language>en-us</language>
+        <copyright>Copyright 2000-2004 Fog Creek Software</copyright>
+
+        <item>
+            <title>Case 10337: CD Bestellung Team 403</title>
+            <link>http://bugz.unartig.ch/?10337</link>
+            <description>
+                <![CDATA[Opened<br />Bestellung von Fotos des Teams Nr. 403 (Strecke 6 nicht gefunden, 13 nur verdeckt)...<br />e01_sola08_hm_0058.jpg<br />e02_sola08_mf_0311.jpg<br />e03_sola08_sz_0319.jpg<br />e04_sola08_hm_0651.jpg<br />e04_sola08_hm_0650.jpg<br />e05_sola08_mf_0571.jpg<br />e07_sola08_th_0532.jpg<br />e08_sola08_hm_0258.jpg<br />e09_sola08_mf_0380.jpg<br />e09_sola08_mf_0381.jpg<br />e10_sola08_sz_0342.jpg<br />e11_sola08_hm_0569.jpg<br />e11_sola08_hm_0570.jpg<br />e12_sola08_mf_0473.jpg<br />e13_sola08_sz_0168.jpg<br />e14_sola08_th_0151.jpg<br /><br /><br />Hier kommen sie:<br />ETH-Bibliothek<br />Ruedi Mumenthaler<br />Spezialsammlungen<br />Rämistrasse 101<br />8092 Zürich<br /><br />Beste Grüsse<br />Ruedi Mumenthaler<br /><br /><br />]]></description>
+            <author>Alexander Josef &lt;alexander.josef@unartig.ch&gt;</author>
+            <category>FogBugzCase10337</category>
+            <guid>http://bugz.unartig.ch/default.php?pg=pgEditBug&amp;command=view&amp;ixBug=10337&amp;=#45648</guid>
+            <pubDate>22 May 08 12:45:12 GMT</pubDate>
+
+        </item>
+
+        <item>
+            <title>Case 10337: CD Bestellung Team 403</title>
+            <link>http://bugz.unartig.ch/?10337</link>
+            <description><![CDATA[Assigned to Fabienne Meyer<br />]]></description>
+            <author>Alexander Josef &lt;alexander.josef@unartig.ch&gt;</author>
+            <category>FogBugzCase10337</category>
+            <guid>http://bugz.unartig.ch/default.php?pg=pgEditBug&amp;command=view&amp;ixBug=10337&amp;=#45649</guid>
+            <pubDate>22 May 08 12:45:13 GMT</pubDate>
+
+        </item>
+
+        <item>
+            <title>Case 10337: CD Bestellung Team 403</title>
+            <link>http://bugz.unartig.ch/?10337</link>
+            <description><![CDATA[Edited<br />CD verschickt, 23.05.08]]></description>
+            <author>Fabienne Meyer &lt;fabienne.meyer@unartig.ch&gt;</author>
+            <category>FogBugzCase10337</category>
+            <guid>http://bugz.unartig.ch/default.php?pg=pgEditBug&amp;command=view&amp;ixBug=10337&amp;=#45726</guid>
+            <pubDate>24 May 08 12:27:14 GMT</pubDate>
+
+        </item>
+
+        <item>
+            <title>Case 10337: CD Bestellung Team 403</title>
+            <link>http://bugz.unartig.ch/?10337</link>
+            <description><![CDATA[Resolved (Waiting For Info)<br />]]></description>
+            <author>Alexander Josef &lt;alexander.josef@unartig.ch&gt;</author>
+            <category>FogBugzCase10337</category>
+            <guid>http://bugz.unartig.ch/default.php?pg=pgEditBug&amp;command=view&amp;ixBug=10337&amp;=#46005</guid>
+            <pubDate>13 Jun 08 09:58:58 GMT</pubDate>
+
+        </item>
+
+        <item>
+            <title>Case 10337: CD Bestellung Team 403</title>
+            <link>http://bugz.unartig.ch/?10337</link>
+            <description><![CDATA[Assigned to Fabienne Meyer<br />]]></description>
+            <author>Fabienne Meyer &lt;fabienne.meyer@unartig.ch&gt;</author>
+            <category>FogBugzCase10337</category>
+            <guid>http://bugz.unartig.ch/default.php?pg=pgEditBug&amp;command=view&amp;ixBug=10337&amp;=#46016</guid>
+            <pubDate>13 Jun 08 15:18:51 GMT</pubDate>
+
+        </item>
+
+    </channel>
+</rss>
+
