@@ -1,0 +1,1 @@
+${response.sendRedirect(createLink(controller: 'wohnung', action: 'index'))}
