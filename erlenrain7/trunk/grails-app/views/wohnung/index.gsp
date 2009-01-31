@@ -15,7 +15,7 @@
     <ul style="margin-left:20px;padding-bottom:10px">
         <g:each var="reservation" in="${listOfUnconfirmedReservations}">
             <li>ID : ${reservation.id}
-            (<g:link params="[googleHref:reservation.id]" action="update">update</g:link>)<br/>
+            (<g:link params="[googleHref:reservation.id,guestEmail:reservation.guest.email]" action="update">update</g:link>)<br/>
                 todo insert loeschen button
                 URL : ${reservation.entryUrl}<br>
                 GUEST : ${reservation.guest}<br>
