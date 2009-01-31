@@ -16,12 +16,17 @@ import com.google.gdata.data.DateTime
 import com.google.gdata.client.Query
 import com.google.gdata.client.calendar.CalendarQuery
 import javax.mail.Session
+import javax.mail.Message
+import javax.mail.internet.MimeMessage
+import javax.mail.Address
+import javax.mail.internet.InternetAddress
 
 
 class WohnungController {
 
-    // todo replace with method to retrieve persisted guest object    
+    // todo replace with method to retrieve persisted guest object
     def guest = new Guest(firstName: "Hans", lastName: "Test", email: "aj@unartig.ch", phone: "0719200745")
+    def administrator = new Guest(firstName: "Hans", lastName: "Test", email: "aj@unartig.ch", phone: "0719200745")
 
     def reservation
     def listOfUnconfirmedReservations
@@ -68,9 +73,6 @@ class WohnungController {
         println(entry.getContent()?.toString())
         println(summary?.getPlainText())
 
-        // todo change title (before confirmation it may contain something like "provisorisch")
-
-        // todo character encoding does not work
         entry.setTitle(new PlainTextConstruct(titleText + "(bestätigt)"))
         // update status to confirmed
         entry.setStatus(EventStatus.CONFIRMED)
@@ -82,7 +84,7 @@ class WohnungController {
         URL editUrl = new URL(entry.getEditLink().getHref());
         myService.update(editUrl, entry)
 
-        // todo send confirmation message to requestor
+        sendConfirmationEmailFor(params.guestEmail,new Date(entry.times[0].startTime.value),new Date(entry.times[0].endTime.value))
 
 
     }
@@ -102,7 +104,7 @@ class WohnungController {
 
         // make entry to calendar with status tentativly
 
-        reservation = new Reservation(guest, startDate: startDate, endDate: endDate)
+        reservation = new Reservation(guest:guest, startDate: startDate, endDate: endDate)
 
         // todo check date constraints:
         // - start date >= today
@@ -133,6 +135,9 @@ class WohnungController {
      *
      */
     void readCalendarEntries() {
+
+
+
 
         listOfUnconfirmedReservations = new ArrayList()
         def myId = "erlenrain7@unartig.ch"
@@ -283,10 +288,50 @@ class WohnungController {
 
     void sendEmailToWohnungAdministrator(Reservation reservation) {
         // init sesssion
-         Properties props = new Properties();
-         props.put("mail.host", "localhost");
-         Session session = Session.getDefaultInstance(props, null);
-        Message message = new MimeMEssage
+        def confirmationUrl = "http://${request.serverName}:${request.serverPort}${request.contextPath}?user=admin"
+        println confirmationUrl
+        println("sending mail")
+        String subject = "Neue Reservation für Erlenrain7"
+        String messageContent = "${reservation.guest} hat eine neue Reservation gemacht. Bitte auf folgenden Link klicken, um die Reservation anzusehen und zu bestätigen: \n\n ${confirmationUrl}"
+
+        sendEmail(administrator.email,subject,messageContent.toString())
+        println("sent email to ${administrator.email}")
+    }
+
+    /**
+     * After a tentative entry has been confirmed by an administrator, inform the guest that his reservation has been fixed.
+     */
+    void sendConfirmationEmailFor(String toAddress, java.util.Date startDate, java.util.Date endDate) {
+
+        println toAddress
+        println startDate
+        println endDate
+
+        // todo : format start and end date. use proper localisation.
+        // todo add link for changing or canceling reservation
+        def subject="Wohnung reserviert: ${startDate} bis ${endDate}"
+        def text="Deine Reservation vom ${startDate} bis zum ${endDate} wurde bestätigt und definitiv reserviert"
+        sendEmail(toAddress,subject,text)
+    }
+
+    /**
+     * Generic email helper for erlenrain7
+     */
+    private void sendEmail(String emailToAddress, java.lang.String subject, java.lang.String text) {
+
+        Properties props = new Properties();
+        props.put("mail.host", "localhost");
+        Session session = Session.getDefaultInstance(props, null);
+        Message message = new MimeMessage(session)
+        String messageType = "UTF-8"
+        message.setFrom(new InternetAddress("erlenrain7@gmail.com"))
+        message.setSubject(subject,messageType)
+        message.setText(text,messageType)
+        InternetAddress[] addressTo = new InternetAddress[1];
+        addressTo[0] = new InternetAddress(emailToAddress)
+        message.setRecipients(Message.RecipientType.TO,addressTo)
+        message.setHeader("Content-Type", "text/plain; charset=UTF-8");
+        javax.mail.Transport.send(message)
 
     }
 }
