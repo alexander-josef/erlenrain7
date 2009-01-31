@@ -73,7 +73,7 @@ class WohnungController {
         println(entry.getContent()?.toString())
         println(summary?.getPlainText())
 
-        entry.setTitle(new PlainTextConstruct(titleText + "(bestätigt)"))
+        entry.setTitle(new PlainTextConstruct(titleText + "(bestÔøΩtigt)"))
         // update status to confirmed
         entry.setStatus(EventStatus.CONFIRMED)
 
@@ -291,8 +291,8 @@ class WohnungController {
         def confirmationUrl = "http://${request.serverName}:${request.serverPort}${request.contextPath}?user=admin"
         println confirmationUrl
         println("sending mail")
-        String subject = "Neue Reservation für Erlenrain7"
-        String messageContent = "${reservation.guest} hat eine neue Reservation gemacht. Bitte auf folgenden Link klicken, um die Reservation anzusehen und zu bestätigen: \n\n ${confirmationUrl}"
+        String subject = "Neue Reservation f√ºr Erlenrain7"
+        String messageContent = "${reservation.guest} hat eine neue Reservation gemacht. Bitte auf folgenden Link klicken, um die Reservation anzusehen und zu best√§tigen: \n\n ${confirmationUrl}"
 
         sendEmail(administrator.email,subject,messageContent.toString())
         println("sent email to ${administrator.email}")
@@ -310,7 +310,7 @@ class WohnungController {
         // todo : format start and end date. use proper localisation.
         // todo add link for changing or canceling reservation
         def subject="Wohnung reserviert: ${startDate} bis ${endDate}"
-        def text="Deine Reservation vom ${startDate} bis zum ${endDate} wurde bestätigt und definitiv reserviert"
+        def text="Deine Reservation vom ${startDate} bis zum ${endDate} wurde best√§tigt und definitiv reserviert"
         sendEmail(toAddress,subject,text)
     }
 
