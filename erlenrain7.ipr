@@ -53,9 +53,8 @@
     <option name="ADDITIONAL_OPTIONS_STRING" value="" />
     <option name="MAXIMUM_HEAP_SIZE" value="128" />
   </component>
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
-    <file url="file://$PROJECT_DIR$/grails-app/controllers/WohnungController.groovy" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/grails-app/views/wohnung/index.gsp" charset="UTF-8" />
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" defaultCharsetForPropertiesFiles="ISO-8859-1">
+    <file url="file://$PROJECT_DIR$/grails-app" charset="UTF-8" />
   </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />

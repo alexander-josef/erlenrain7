@@ -13,7 +13,7 @@ public class Reservation {
   Date startDate
   Date endDate
   String title
-  Guest guest
+  User guest
   // todo make status enumeration
   boolean statusConfirmed
   // todo difference to id?
