@@ -1,0 +1,4 @@
+class Role {
+
+    String name
+}

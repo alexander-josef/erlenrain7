@@ -25,8 +25,8 @@ import javax.mail.internet.InternetAddress
 class WohnungController {
 
     // todo replace with method to retrieve persisted guest object
-    def guest = new Guest(firstName: "Hans", lastName: "Test", email: "aj@unartig.ch", phone: "0719200745")
-    def administrator = new Guest(firstName: "Hans", lastName: "Test", email: "aj@unartig.ch", phone: "0719200745")
+//    def guest = new Guest(firstName: "Hans", lastName: "Test", email: "aj@unartig.ch", phone: "0719200745")
+//    def administrator = new Guest(firstName: "Hans", lastName: "Test", email: "aj@unartig.ch", phone: "0719200745")
 
     def reservation
     def listOfUnconfirmedReservations
