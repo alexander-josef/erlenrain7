@@ -1,20 +1,25 @@
 abstract class BaseController {
-  def auth() {
-    if (!session.userId) {
-
-      def originalRequestParams =
-      [controller: controllerName,
-              action: actionName]
-
-      originalRequestParams.putAll(params)
-
-      session.originalRequestParams =
-        originalRequestParams
 
 
+    /**
+     * Base method to authenticate users
+     */
+    def auth() {
+        if (!session.userId) {
 
-      redirect(controller: 'user', action: 'login')
-      return false
+            def originalRequestParams =
+            [controller: controllerName,
+                    action: actionName]
+
+            originalRequestParams.putAll(params)
+
+            session.originalRequestParams =
+                originalRequestParams
+
+
+
+            redirect(controller: 'user', action: 'login')
+            return false
+        }
     }
-  }
 }
