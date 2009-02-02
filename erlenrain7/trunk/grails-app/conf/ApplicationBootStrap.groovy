@@ -4,7 +4,7 @@ public class ApplicationBootStrap {
     final String SUPER_ADMIN = "doelf2000"
     if (!User.findByUserId(SUPER_ADMIN)) {
 //      User user = new User(userId: SUPER_ADMIN, hashedPassword: "leonard", firstName: "Doelf", lastName: "Josef", email: "doelf@erlenrain7.ch")
-      User user = new User(userId: SUPER_ADMIN)
+      User user = new User(userId: SUPER_ADMIN,firstName:"Doelf",lastName:"Josef",email:"doelf@bluewin.ch",hashedPassword:"123456")
 
       println user
 

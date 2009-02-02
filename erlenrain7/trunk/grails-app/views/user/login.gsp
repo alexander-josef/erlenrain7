@@ -23,7 +23,7 @@
             <label for='userId'>User ID:</label>
           </td>
           <td valign='top' class='value '>
-            <input type="text" maxlength='8'
+            <input type="text" maxlength='15'
                     name='userId'
                     value='${user?.userId}'>
           </input>
@@ -34,7 +34,7 @@
             <label for='password'>Password:</label>
           </td>
           <td valign='top' class='value '>
-            <input type="password" maxlength='8'
+            <input type="password" maxlength='15'
                     name='password'
                     value='${user?.password}'>
           </input>
