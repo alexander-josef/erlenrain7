@@ -1,6 +1,13 @@
-class UserController {
+class UserController extends BaseController {
 
   def scaffold = User
+
+
+  /**
+   * Intercept all reqeusts with a login page, except the login and logout action
+   */
+  def beforeInterceptor = [action: this.&auth,
+          except: ['login', 'logout']]
 
   /**
    * Login closure: 
@@ -15,8 +22,14 @@ class UserController {
       if (user) {
         session.userId = user.userId
         println("succesfully logged in for user ${user}!")
-        
-        redirect(controller: 'user')
+
+        // forward to original action and params
+        def redirectParams =
+        session.originalRequestParams ?
+          session.originalRequestParams :
+          [controller: 'wohnung']
+        redirect(redirectParams)
+
       }
       else {
         flash['message'] = 'Please enter a valid user ID and password'
