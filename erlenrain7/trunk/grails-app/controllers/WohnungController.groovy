@@ -25,8 +25,14 @@ import javax.mail.internet.InternetAddress
 class WohnungController extends BaseController{
 
     // todo replace with method to retrieve persisted guest object
-//    def guest = new Guest(firstName: "Hans", lastName: "Test", email: "aj@unartig.ch", phone: "0719200745")
-//    def administrator = new Guest(firstName: "Hans", lastName: "Test", email: "aj@unartig.ch", phone: "0719200745")
+
+    def getGuest = {
+        User.findByUserId(session.userId)
+    }
+
+    def getAdministrator = {
+        User.findByUserId(ApplicationBootStrap.SUPER_ADMIN)
+    }
 
     def beforeInterceptor = [action: this.&auth]
 
@@ -107,7 +113,7 @@ class WohnungController extends BaseController{
 
         // make entry to calendar with status tentativly
 
-        reservation = new Reservation(guest:guest, startDate: startDate, endDate: endDate)
+        reservation = new Reservation(guest:getGuest(), startDate: startDate, endDate: endDate)
 
         // todo check date constraints:
         // - start date >= today
@@ -176,7 +182,7 @@ class WohnungController extends BaseController{
                 println(new Date(time.startTime.value))
                 if (entry.status.equals(EventStatus.TENTATIVE)) {
                     listOfUnconfirmedReservations.add(new Reservation(
-                            guest: guest,
+                            guest: getGuest(),
                             startDate: new Date(time.startTime.value),
                             title: entry.getTitle().getPlainText(),
                             endDate: new Date(time.endTime.value),
@@ -297,8 +303,8 @@ class WohnungController extends BaseController{
         String subject = "Neue Reservation für Erlenrain7"
         String messageContent = "${reservation.guest} hat eine neue Reservation gemacht. Bitte auf folgenden Link klicken, um die Reservation anzusehen und zu bestätigen: \n\n ${confirmationUrl}"
 
-        sendEmail(administrator.email,subject,messageContent.toString())
-        println("sent email to ${administrator.email}")
+        sendEmail(getAdministrator().email,subject,messageContent.toString())
+        println("sent email to ${getAdministrator().email}")
     }
 
     /**
