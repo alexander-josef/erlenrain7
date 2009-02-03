@@ -48,7 +48,7 @@ class UserController {
     def logout = {
         session.userId = null
         flash['message'] = 'Successfully logged out'
-        redirect(controller: 'race', action: 'search')
+        redirect(controller: 'wohnung', action: 'index')
     }
 
     def list = {

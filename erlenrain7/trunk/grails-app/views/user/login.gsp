@@ -10,6 +10,7 @@
   <g:if test="${flash.message}">
     <div class="message">${flash.message}</div>
   </g:if>
+    %{-- todo check this (race bean?) : --}%
   <g:hasErrors bean="${race}">
     <div class="errors">
       <g:renderErrors bean="${user}" as="list"/>
