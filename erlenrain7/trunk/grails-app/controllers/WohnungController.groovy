@@ -82,7 +82,7 @@ class WohnungController extends BaseController{
         println(entry.getContent()?.toString())
         println(summary?.getPlainText())
 
-        entry.setTitle(new PlainTextConstruct(titleText + "(best�tigt)"))
+        entry.setTitle(new PlainTextConstruct(titleText + "(bestätigt)"))
         // update status to confirmed
         entry.setStatus(EventStatus.CONFIRMED)
 
@@ -108,8 +108,6 @@ class WohnungController extends BaseController{
         String endDateInput = "${params.reservationEndDate_year}/${params.reservationEndDate_month}/${params.reservationEndDate_day}"
         Date startDate = new SimpleDateFormat("yyyy/MM/dd").parse(startDateInput)
         Date endDate = new SimpleDateFormat("yyyy/MM/dd").parse(endDateInput)
-//    render(startDate)
-//    render(endDate)
 
         // make entry to calendar with status tentativly
 
@@ -128,13 +126,8 @@ class WohnungController extends BaseController{
         sendEmailToWohnungAdministrator(reservation)
 
         // todo return success message
-        // or use redirect?
-//        render(view:'reservationSuccess',model:[reservation:reservation])
 
         println(reservation.guest)
-
-//    render(reservation)
-
     }
 
     /**
@@ -159,9 +152,6 @@ class WohnungController extends BaseController{
         // List existing entries
         //
 
-        //
-        //  Get at most 20 events in the period starting 1 week ago and ending 4 weeks in the future
-        //
         println("Reading Calendar entries from Google Calendar ....")
 
         // todo query event entries from today that are tentative
@@ -195,17 +185,6 @@ class WohnungController extends BaseController{
             }
         }
 
-//        CalendarEventFeed myFeed = myService.getFeed(feedUrl,CalendarEventFeed.class)
-//
-//        for(obj in myFeed.getEntries()) {
-//            CalendarEventEntry calEntry = (CalendarEventEntry)obj
-//            println calEntry.getClass().getName()
-//            println "and now the times ..."
-//            println calEntry.getTimes().get(0).startTime.toUiString()
-//            println calEntry.getTimes().get(0).endTime.toUiString()
-//
-//        }
-
         //
         //  Get at most 20 events in the period starting 1 year ago lasting 2 years
         //
@@ -224,8 +203,7 @@ class WohnungController extends BaseController{
     /**
      * Call the google calendar API and add the reservation as an event using the extra properties for the status information
      */
-    private void reserveTentatively(Reservation p) {
-        // todo can reservation be hidden, i.e. only visible by administration and requestor until confirmed?
+    private void reserveTentatively(Reservation reservation) {
 
         println "writing entry ...2"
         def myId = "erlenrain7@unartig.ch"
@@ -244,30 +222,15 @@ class WohnungController extends BaseController{
         // Use standard groovy magic to set the properties after construction
         def me = new Person(name: "John Wilson", email: "tugwilson@gmail.com", uri: "http://eek.ook.org")
 
-        //
-        // Need special magic in the GDataCategory to do this
-        //
-        // title and content are treated as plain text. If you want XHTML or XML then pass a closure or a
-        // Buildable object and it will run it in a builder context
-        //
-        // Note that we can't use title and content in the Catagory as they are already properties of the class.
-        // Later I'll create a custom MetaClass for EventEntry which will let us use these names. Until then we'll mangle them
-        //
-        // author can be a single Person or a list of Person
-        //
-        // time can be a single When or a list of them
-        //
-
-
-        def newEventEntry = new EventEntry()
+        EventEntry newEventEntry = new EventEntry()
 
         When eventTimes = new When()
 
 
 
 
-        DateTime startDate = new DateTime(new Date())
-        DateTime endDate = new DateTime(new Date().plus(1))
+        DateTime startDate = new DateTime(reservation.startDate)
+        DateTime endDate = new DateTime(reservation.endDate)
 
         // only the dates, no time, for all-day-event
         startDate.setDateOnly(true)
@@ -282,15 +245,10 @@ class WohnungController extends BaseController{
         println("end of event : " + eventTimes.getEndTime())
 
 
-        newEventEntry.setTitle(new PlainTextConstruct("Test Entry Number one"))
-        newEventEntry.setContent(new PlainTextConstruct(" ... some content ...."))
-        newEventEntry.setStatus(EventStatus.TENTATIVE) // todo check this !!
+        newEventEntry.setTitle(new PlainTextConstruct(reservation.guest.party))
+        newEventEntry.setContent(new PlainTextConstruct("Reservation Wohnung Engelberg von ${reservation.guest}"))
+        newEventEntry.setStatus(EventStatus.TENTATIVE)
         newEventEntry.addTime(eventTimes)
-
-        // todo set hidden property (not available on eventEntry? maybe only no calendar entry)
-//    newEventEntry.setHidde)
-//        def newEntry = new EventEntry(title1: "This is a test event", content1: "this is some content", author: me,
-//                time: new When(start: 1.hour.from.now, end: 2.hours.from.now))
 
         myService.insert(feedUrl, newEventEntry)
 
@@ -300,7 +258,8 @@ class WohnungController extends BaseController{
 
     void sendEmailToWohnungAdministrator(Reservation reservation) {
         // init sesssion
-        def confirmationUrl = "http://${request.serverName}:${request.serverPort}${request.contextPath}?user=admin"
+        // todo read admin
+        def confirmationUrl = "http://${request.serverName}:${request.serverPort}${request.contextPath}?userId=admin"
         println confirmationUrl
         println("sending mail")
         String subject = "Neue Reservation für Erlenrain7"

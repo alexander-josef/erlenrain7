@@ -4,7 +4,12 @@ public class ApplicationBootStrap {
     def init = {servletContext ->
         if (!User.findByUserId(SUPER_ADMIN)) {
 //      User user = new User(userId: SUPER_ADMIN, hashedPassword: "leonard", firstName: "Doelf", lastName: "Josef", email: "doelf@erlenrain7.ch")
-            User user = new User(userId: SUPER_ADMIN, firstName: "Doelf", lastName: "Josef", email: "aj@unartig.ch", hashedPassword: "123456")
+            User user = new User(userId: SUPER_ADMIN,
+                    firstName: "Doelf",
+                    lastName: "Josef",
+                    email: "aj@unartig.ch",
+                    hashedPassword: "123456",
+                    party:"Josef/Knellwolf Wil")
 
             println user
 

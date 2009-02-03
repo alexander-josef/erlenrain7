@@ -59,6 +59,7 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="GrailsPluginsStorage" />
   <component name="IdProvider" IDEtalkID="C286F1A004DD63BFECF57F64377CDA3E" />
   <component name="InspectionProjectProfileManager">
     <option name="PROJECT_PROFILE" value="Project Default" />

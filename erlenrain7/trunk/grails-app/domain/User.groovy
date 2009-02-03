@@ -5,6 +5,7 @@ class User {
   String firstName
   String lastName
   String email
+  String party // a user belongs to a party/familiy
 //    String phone
 
   static constraints = {
