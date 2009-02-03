@@ -1,10 +1,5 @@
 class UserController {
 
-    def index = { redirect(action: list, params: params) }
-
-    // the delete, save and update actions only accept POST requests
-    def allowedMethods = [delete: 'POST', save: 'POST', update: 'POST']
-
 
     /**
      * Intercept all reqeusts with a login page, except the login and logout action
@@ -50,6 +45,15 @@ class UserController {
         flash['message'] = 'Successfully logged out'
         redirect(controller: 'wohnung', action: 'index')
     }
+
+    // Start scaffolding:
+
+    def index = { redirect(action: list, params: params) }
+
+    // the delete, save and update actions only accept POST requests
+    def allowedMethods = [delete: 'POST', save: 'POST', update: 'POST']
+
+
 
     def list = {
         if (!params.max) params.max = 10
