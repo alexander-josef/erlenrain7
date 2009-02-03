@@ -144,11 +144,8 @@ class WohnungController extends BaseController{
      *
      */
     void readCalendarEntries() {
-
-
-
-
         listOfUnconfirmedReservations = new ArrayList()
+        def logggedInGuest = getGuest()
         def myId = "erlenrain7@unartig.ch"
         def myPassword = "noedsichaer"
         def myCalendarId = "a2kndad9nrv4ceume9timpka6s@group.calendar.google.com" // id for this calendar (not the default one for the account)
@@ -182,7 +179,7 @@ class WohnungController extends BaseController{
                 println(new Date(time.startTime.value))
                 if (entry.status.equals(EventStatus.TENTATIVE)) {
                     listOfUnconfirmedReservations.add(new Reservation(
-                            guest: getGuest(),
+                            guest: logggedInGuest,
                             startDate: new Date(time.startTime.value),
                             title: entry.getTitle().getPlainText(),
                             endDate: new Date(time.endTime.value),
@@ -269,11 +266,17 @@ class WohnungController extends BaseController{
 
 
 
-        def startDate = new DateTime(new Date())
-        def endDate = new DateTime(new Date().plus(1))
+        DateTime startDate = new DateTime(new Date())
+        DateTime endDate = new DateTime(new Date().plus(1))
 
+        // only the dates, no time, for all-day-event
+        startDate.setDateOnly(true)
+        endDate.setDateOnly(true
+        ) 
         eventTimes.setStartTime(startDate)
         eventTimes.setEndTime(endDate)
+
+
 
         println("start of event : " + eventTimes.getStartTime())
         println("end of event : " + eventTimes.getEndTime())
