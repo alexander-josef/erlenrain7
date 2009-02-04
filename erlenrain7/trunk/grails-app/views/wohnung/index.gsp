@@ -4,8 +4,8 @@
     <meta name="layout" content="main"/>
 </head>
 <body>
-
-<g:if test="${params.user =='admin'}">
+Hello ${guest}
+<g:if test="${guest.admin}">
 
 
     <p style="margin-left:20px;padding-bottom:10px;color:orangered">Administrations-Modus</p>

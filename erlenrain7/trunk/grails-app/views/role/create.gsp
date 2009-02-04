@@ -28,10 +28,19 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="name">Name:</label>
+                                    <label for="description">Description:</label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:roleInstance,field:'name','errors')}">
-                                    <input type="text" id="name" name="name" value="${fieldValue(bean:roleInstance,field:'name')}"/>
+                                <td valign="top" class="value ${hasErrors(bean:roleInstance,field:'description','errors')}">
+                                    <input type="text" id="description" name="description" value="${fieldValue(bean:roleInstance,field:'description')}"/>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="roleName">Role Name:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:roleInstance,field:'roleName','errors')}">
+                                    <input type="text" id="roleName" name="roleName" value="${fieldValue(bean:roleInstance,field:'roleName')}"/>
                                 </td>
                             </tr> 
                         

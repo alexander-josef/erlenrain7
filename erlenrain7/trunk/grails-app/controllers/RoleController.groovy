@@ -1,5 +1,5 @@
-class RoleController {
-    
+class RoleController extends BaseController{
+
     def beforeInterceptor = [action: this.&auth]
 
 
@@ -9,8 +9,6 @@ class RoleController {
 
     // the delete, save and update actions only accept POST requests
     def allowedMethods = [delete:'POST', save:'POST', update:'POST']
-
-
 
     def list = {
         if(!params.max) params.max = 10

@@ -23,7 +23,9 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
-                   	        <g:sortableColumn property="name" title="Name" />
+                   	        <g:sortableColumn property="description" title="Description" />
+                        
+                   	        <g:sortableColumn property="roleName" title="Role Name" />
                         
                         </tr>
                     </thead>
@@ -33,7 +35,9 @@
                         
                             <td><g:link action="show" id="${roleInstance.id}">${fieldValue(bean:roleInstance, field:'id')}</g:link></td>
                         
-                            <td>${fieldValue(bean:roleInstance, field:'name')}</td>
+                            <td>${fieldValue(bean:roleInstance, field:'description')}</td>
+                        
+                            <td>${fieldValue(bean:roleInstance, field:'roleName')}</td>
                         
                         </tr>
                     </g:each>
