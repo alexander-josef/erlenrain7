@@ -71,6 +71,33 @@
                                 </td>
                             </tr> 
                         
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="role">Role:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:userInstance,field:'role','errors')}">
+                                    <g:select optionKey="id" from="${Role.list()}" name="role.id" value="${userInstance?.role?.id}" ></g:select>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="party">Party:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:userInstance,field:'party','errors')}">
+                                    <input type="text" id="party" name="party" value="${fieldValue(bean:userInstance,field:'party')}"/>
+                                </td>
+                            </tr> 
+                        
+                            <!--<tr class="prop">-->
+                                <!--<td valign="top" class="name">-->
+                                    <!--<label for="phone">Phone:</label>-->
+                                <!--</td>-->
+                                %{--<td valign="top" class="value ${hasErrors(bean:userInstance,field:'phone','errors')}">--}%
+                                    %{--<input type="text" id="phone" name="phone" value="${fieldValue(bean:userInstance,field:'phone')}"/>--}%
+                                <!--</td>-->
+                            <!--</tr> -->
+                        
                         </tbody>
                     </table>
                 </div>

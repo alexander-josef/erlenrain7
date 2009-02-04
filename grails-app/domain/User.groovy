@@ -6,7 +6,7 @@ class User {
   String lastName
   String email
   String party // a user belongs to a party/familiy
-  String phone
+//  String phone
   Role role  
 
   static constraints = {
@@ -18,7 +18,10 @@ class User {
     role(blank:false)
   }
     
-    static optionals = ["phone"]
+//    static optionals = ["phone"]
 
+    boolean isAdmin(){
+        return role.equals(Role.findByRoleName(Role.SUPER_ADMIN_ROLE))
+    }
   def String toString() {"${this.firstName} ${this.lastName}"}
 }

@@ -24,14 +24,18 @@ import javax.mail.internet.InternetAddress
 
 class WohnungController extends BaseController{
 
-    // todo replace with method to retrieve persisted guest object
-
+    /**
+     * Todo Caching?
+     */
     def getGuest = {
-        User.findByUserId(session.userId)
+            User.findByUserId(session.userId)
     }
 
+    /**
+     * Todo Administrator shall be loaded by Guest --> Wohnung --> Admin
+     */
     def getAdministrator = {
-        User.findByUserId(ApplicationBootStrap.SUPER_ADMIN)
+        User.findByUserId(ApplicationBootStrap.SUPER_ADMIN_USERNAME)
     }
 
     def beforeInterceptor = [action: this.&auth]
@@ -39,8 +43,13 @@ class WohnungController extends BaseController{
 
     def reservation
     def listOfUnconfirmedReservations
+
+    /**
+     * read the calendar entries and also put the active user in the request scope
+     */
     def index = {
         readCalendarEntries()
+        [guest: getGuest()]
     }
 
     /**
@@ -58,11 +67,6 @@ class WohnungController extends BaseController{
      */
     def update = {
 
-        println("8updating event with id : " + params.googleHref + "...")
-
-        // id is urlencoded, translate back
-
-//        def reservationId = URLDecoder.decode(params.id)
         String reservationId = params.googleHref
         def myId = "erlenrain7@unartig.ch"
         def myPassword = "noedsichaer"
@@ -154,7 +158,7 @@ class WohnungController extends BaseController{
 
         println("Reading Calendar entries from Google Calendar ....")
 
-        // todo query event entries from today that are tentative
+        // query event entries from last week on that are tentative
 
         CalendarQuery myQuery = new CalendarQuery(feedUrl)
         def today = new Date()

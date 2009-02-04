@@ -64,6 +64,27 @@
                             
                         </tr>
                     
+                        <tr class="prop">
+                            <td valign="top" class="name">Role:</td>
+                            
+                            <td valign="top" class="value"><g:link controller="role" action="show" id="${userInstance?.role?.id}">${userInstance?.role?.encodeAsHTML()}</g:link></td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Party:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:userInstance, field:'party')}</td>
+                            
+                        </tr>
+                    
+                        <!--<tr class="prop">-->
+                            <!--<td valign="top" class="name">Phone:</td>-->
+                            %{----}%
+                            %{--<td valign="top" class="value">${fieldValue(bean:userInstance, field:'phone')}</td>--}%
+                            %{----}%
+                        <!--</tr>-->
+                    
                     </tbody>
                 </table>
             </div>
