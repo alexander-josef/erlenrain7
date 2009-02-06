@@ -20,8 +20,11 @@ class User {
     
 //    static optionals = ["phone"]
 
-    boolean isAdmin(){
+    boolean userIsAdmin(){
         return role.equals(Role.findByRoleName(Role.SUPER_ADMIN_ROLE))
     }
+
+    
+
   def String toString() {"${this.firstName} ${this.lastName}"}
 }
