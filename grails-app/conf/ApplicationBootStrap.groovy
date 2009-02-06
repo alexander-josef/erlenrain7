@@ -6,16 +6,16 @@ public class ApplicationBootStrap {
     def init = {servletContext ->
 
         // create all current roles
-        if (!Role.findByRoleName(SUPER_ADMIN_ROLE)) {
-            new Role(roleName: SUPER_ADMIN_ROLE,description:"Super Administrator for the application").save()
+        if (!Role.findByRoleName(Role.SUPER_ADMIN_ROLE)) {
+            new Role(roleName: Role.SUPER_ADMIN_ROLE,description:"Super Administrator for the application").save()
         }
 
-        if (!Role.findByRoleName(ADMIN_ROLE)) {
-            new Role(roleName: ADMIN_ROLE,description:"Administrator Role for one or several appartments").save()
+        if (!Role.findByRoleName(Role.ADMIN_ROLE)) {
+            new Role(roleName: Role.ADMIN_ROLE,description:"Administrator Role for one or several appartments").save()
         }
 
-        if (!Role.findByRoleName(GUEST_ROLE)) {
-            new Role(roleName: GUEST_ROLE,description:"Guest role for one appartment").save()
+        if (!Role.findByRoleName(Role.GUEST_ROLE)) {
+            new Role(roleName: Role.GUEST_ROLE,description:"Guest role for one appartment").save()
         }
 
 

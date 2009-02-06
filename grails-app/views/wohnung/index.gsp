@@ -1,18 +1,30 @@
 <html>
 <head>
     <title>Welcome to Grails</title>
-    <meta name="layout" content="main"/>
+    <meta name="layout" content="main_topnav"/>
 </head>
 <body>
-Hello ${guest}
-<g:if test="${guest.admin}">
+<p style="margin-left:20px">
+    Hallo ${guest}
+</p>
+<h1 style="margin-left:20px;">Erlenrain7, Wohnungsreservation</h1>
 
+%{-- todo insert flash messages here. for example for confirmation of reservations --}%
+<g:if test="${guest.userIsAdmin()}">
 
-    <p style="margin-left:20px;padding-bottom:10px;color:orangered">Administrations-Modus</p>
+    %{--<p style="margin-left:20px;padding-bottom:10px;color:orangered">Administrations-Modus</p>--}%
     <p style="margin-left:20px;padding-bottom:10px">
-        <h2 style="margin-left:20px;padding-bottom:10px">Neue Reservationswünsche</h2>
+
+    <g:if test="${flash.message}">
+      <div class="message">${flash.message}</div>
+    </g:if>
+
+    <h3 style="margin-left:20px;padding-bottom:10px">Offene Reservationswünsche</h3>
 
     <ul style="margin-left:20px;padding-bottom:10px">
+        <g:if test="${listOfUnconfirmedReservations.empty}">
+            <li>(Momentan keine offene Reservationswünsche)</li>
+        </g:if>
         <g:each var="reservation" in="${listOfUnconfirmedReservations}">
             <li>ID : ${reservation.id}
             (<g:link params="[googleHref:reservation.id,guestEmail:reservation.guest.email]" action="update">update</g:link>)<br/>
@@ -27,11 +39,12 @@ Hello ${guest}
 
 </g:if>
 
-<h1 style="margin-left:20px;">Erlenrain7, Wohnungsreservation</h1>
 <g:form controller="wohnung" action="reserve" method="post">
+
+    <h3 style="margin-left:20px;padding-bottom:10px">Neue Reservationsanfrage</h3>
+
     <p style="margin-left:20px;width:80%">
         <!--TODO replace the datepicker with a calendar dhtml picker, like the one from yahoo ui (http://developer.yahoo.com/yui/calendar/) -->
-        Neue Reservationsanfrage<br/>
         Von <g:datePicker precision="day" name="reservationStartDate"/><br/>
         Bis  <g:datePicker precision="day" name="reservationEndDate"/> <br/>
         %{-- todo also option fuer end-Datum Anzahl Tage anbieten --}%

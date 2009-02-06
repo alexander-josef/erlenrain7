@@ -49,7 +49,7 @@ class WohnungController extends BaseController{
      */
     def index = {
         readCalendarEntries()
-        [guest: getGuest()]
+        [guest: getGuest(),listOfUnconfirmedReservations:listOfUnconfirmedReservations]
     }
 
     /**
@@ -98,6 +98,10 @@ class WohnungController extends BaseController{
         myService.update(editUrl, entry)
 
         sendConfirmationEmailFor(params.guestEmail,new Date(entry.times[0].startTime.value),new Date(entry.times[0].endTime.value))
+
+        flash['message'] = 'Reservation wurde erfolgreich bestätigt'
+
+        redirect(action:index)
 
 
     }

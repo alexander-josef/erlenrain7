@@ -11,6 +11,6 @@
             <img src="${createLinkTo(dir:'images',file:'spinner.gif')}" alt="Spinner" />
         </div>	
         <div class="logo"><img src="${createLinkTo(dir:'images',file:'grails_logo.jpg')}" alt="Grails" /></div>	
-        <g:layoutBody />		
+        <g:layoutBody />
     </body>	
 </html>
