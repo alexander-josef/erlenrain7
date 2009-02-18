@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-  <meta name="layout" content="main">
+  <meta name="layout" content="main_home">
   <title>Log in to erlenrain7</title></head>
 <body>
 
