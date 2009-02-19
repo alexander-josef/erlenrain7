@@ -26,14 +26,16 @@
             <li>(Momentan keine offene Reservationswünsche)</li>
         </g:if>
         <g:each var="reservation" in="${listOfUnconfirmedReservations}">
-            <li>ID : ${reservation.id}
-            (<g:link params="[googleHref:reservation.id,guestEmail:reservation.guest.email]" action="update">update</g:link>)<br/>
-                todo insert loeschen button
-                URL : ${reservation.entryUrl}<br>
-                GUEST : ${reservation.guest}<br>
-                TITLE : ${reservation.title}<br>
-                CONFIRMED: ${reservation.statusConfirmed}<br>
-            </li>
+          <!--todo date format-->
+            <li> Datum : ${reservation.startDate} - ${reservation.endDate}</li>
+            Gast: ${reservation.guest}<br/>
+                <g:link params="[googleHref:reservation.id,guestEmail:reservation.guest.email]" action="update">Bestätigen</g:link>
+          <!--todo : loeschen action-->
+                <g:link params="[googleHref:reservation.id,guestEmail:reservation.guest.email]" action="update">Löschen</g:link>
+                %{--URL : ${reservation.entryUrl}<br>--}%
+                %{--GUEST : ${reservation.guest}<br>--}%
+                %{--TITLE : ${reservation.title}<br>--}%
+                %{--CONFIRMED: ${reservation.statusConfirmed}<br>--}%
         </g:each>
     </ul>
 
