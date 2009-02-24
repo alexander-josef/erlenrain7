@@ -1,3 +1,10 @@
+package ch.unartig.erlenrain7.grails.domain
+
+import ch.unartig.erlenrain7.grails.domain.Role
+
+/**
+ * Also used as 'Guest' throughout the application. A user belongs to one (standard case) or many appartments.
+ */
 class User {
 
   String userId

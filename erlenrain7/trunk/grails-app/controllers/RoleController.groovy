@@ -1,3 +1,5 @@
+import ch.unartig.erlenrain7.grails.domain.Role
+
 class RoleController extends BaseController{
 
     def beforeInterceptor = [action: this.&auth]

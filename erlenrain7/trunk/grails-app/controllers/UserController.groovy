@@ -1,3 +1,5 @@
+import ch.unartig.erlenrain7.grails.domain.User
+
 class UserController extends BaseController{
     
 
