@@ -1,3 +1,4 @@
+<%@ page import="ch.unartig.erlenrain7.grails.domain.Role" %>
 
 
 <html>

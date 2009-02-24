@@ -1,3 +1,6 @@
+import ch.unartig.erlenrain7.grails.domain.Role
+import ch.unartig.erlenrain7.grails.domain.User
+
 public class ApplicationBootStrap {
 
     public static final String SUPER_ADMIN_USERNAME = "doelf2000"
