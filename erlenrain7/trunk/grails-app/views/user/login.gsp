@@ -21,13 +21,12 @@
       <table>
         <tr class='prop'>
           <td valign='top' class='name'>
-            <label for='userId'>User ID:</label>
+            <label for='email'>E-Mail:</label>
           </td>
           <td valign='top' class='value '>
-            <input type="text" maxlength='15'
-                    name='userId'
-                    value='${user?.userId}'>
-          </input>
+            <input id="email" type="text" maxlength='15'
+                    name='email'
+                    value='${user?.email}' />
           </td>
         </tr>
         <tr class='prop'>
@@ -35,10 +34,9 @@
             <label for='password'>Password:</label>
           </td>
           <td valign='top' class='value '>
-            <input type="password" maxlength='15'
+            <input id="password" type="password" maxlength='15'
                     name='password'
-                    value='${user?.password}'>
-          </input>
+                    value='${user?.password}'/>
           </td>
         </tr>
       </table>
