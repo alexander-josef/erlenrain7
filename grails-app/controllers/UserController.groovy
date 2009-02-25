@@ -18,7 +18,7 @@ class UserController extends BaseController{
             def user = new User()
         }
         else if (request.method == "POST") {
-            def user = User.findByUserIdAndHashedPassword(params.userId, params.password)
+            def user = User.findByEmailAndHashedPassword(params.email, params.password)
             if (user) {
                 session.userId = user.userId
                 println("succesfully logged in for user ${user}!")
