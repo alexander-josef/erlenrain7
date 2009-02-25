@@ -122,6 +122,7 @@ public class Reservation {
     String subject = "Neue Reservation für Erlenrain7"
     String messageContent = "${this.guest} hat eine neue Reservation gemacht. Bitte auf folgenden Link klicken, um die Reservation anzusehen und zu bestätigen: \n\n ${confirmationUrl}"
 
+    // todo : get admin from reservation
     sendEmail(getAdministrator().email, subject, messageContent.toString())
     println("sent email to ${getAdministrator().email}")
   }

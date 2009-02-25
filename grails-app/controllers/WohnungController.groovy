@@ -7,9 +7,12 @@ import javax.mail.Message
 import javax.mail.internet.MimeMessage
 import javax.mail.internet.InternetAddress
 import java.text.SimpleDateFormat
+import ch.unartig.erlenrain7.grails.domain.Wohnung
 
 
 class WohnungController extends BaseController {
+
+  def scaffold = Wohnung
 
   /**
    * Todo Caching?
