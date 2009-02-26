@@ -3,7 +3,7 @@ import ch.unartig.erlenrain7.grails.domain.User
 
 public class ApplicationBootStrap {
 
-    public static final String SUPER_ADMIN_USERNAME = "doelf2000"
+
 
 
     def init = {servletContext ->
@@ -24,9 +24,9 @@ public class ApplicationBootStrap {
 
 
         // create default super admin user:
-        if (!User.findByUserId(SUPER_ADMIN_USERNAME)) {
+        if (!User.findByUserId(User.SUPER_ADMIN_USERNAME)) {
             def superAdminRole = Role.findByRoleName(Role.SUPER_ADMIN_ROLE)
-            User user = new User(userId: SUPER_ADMIN_USERNAME,
+            User user = new User(userId: User.SUPER_ADMIN_USERNAME,
                     firstName: "Doelf",
                     lastName: "Josef",
                     email: "aj@unartig.ch",
@@ -38,7 +38,7 @@ public class ApplicationBootStrap {
             user.save()
         }
 
-        def doelf = User.findByUserId("doelf2000")
+        def doelf = User.findByUserId(User.SUPER_ADMIN_USERNAME)
 
         println(doelf)
     }
