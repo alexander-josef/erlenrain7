@@ -7,6 +7,8 @@ import ch.unartig.erlenrain7.grails.domain.Role
  */
 class User {
 
+  static String SUPER_ADMIN_USERNAME = "doelf2000"
+
   String userId
   String hashedPassword
   String firstName
