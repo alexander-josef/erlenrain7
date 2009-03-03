@@ -18,8 +18,13 @@ class UserController extends BaseController{
             def user = new User()
         }
         else if (request.method == "POST") {
+          // todo apply one-way hash algorithm on the clear text password
             def user = User.findByEmailAndHashedPassword(params.email, params.password)
             if (user) {
+
+              // todo also add wohnung
+              // check user for wohnungen. if one is attached to the user, then use it silently
+              // if many are attached to the user, then show select field
                 session.userId = user.userId
                 println("succesfully logged in for user ${user}!")
 
@@ -120,6 +125,7 @@ class UserController extends BaseController{
     }
 
     def save = {
+      // todo apply one-way hash algorithm for password
         def userInstance = new User(params)
         if(!userInstance.hasErrors() && userInstance.save()) {
             flash.message = "User ${userInstance.id} created"

@@ -8,6 +8,7 @@ import ch.unartig.erlenrain7.grails.domain.Role
 class User {
 
   static String SUPER_ADMIN_USERNAME = "doelf2000"
+  static String GUEST_USERNAME = "alexander.josef"
 
   String userId
   String hashedPassword
@@ -16,7 +17,9 @@ class User {
   String email
   String party // a user belongs to a party/familiy
 //  String phone
-  Role role  
+  Role role
+  // a user can have one (standard case) or many appartments
+  List<Wohnung> appartments
 
   static constraints = {
     userId(minSize: 6, unique: true)
