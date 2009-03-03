@@ -6,7 +6,7 @@
 <body>
 
 <div class="body">
-  <h1>Please log in</h1>
+  <h1>Bitte anmelden</h1>
   <g:if test="${flash.message}">
     <div class="message">${flash.message}</div>
   </g:if>
@@ -24,7 +24,7 @@
             <label for='email'>E-Mail:</label>
           </td>
           <td valign='top' class='value '>
-            <input id="email" type="text" maxlength='15'
+            <input id="email" type="text" maxlength='40'
                     name='email'
                     value='${user?.email}' />
           </td>

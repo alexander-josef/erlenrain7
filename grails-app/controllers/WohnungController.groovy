@@ -8,6 +8,7 @@ import javax.mail.internet.MimeMessage
 import javax.mail.internet.InternetAddress
 import java.text.SimpleDateFormat
 import ch.unartig.erlenrain7.grails.domain.Wohnung
+import ch.unartig.erlenrain7.util.Erlenrain7Util
 
 
 class WohnungController extends BaseController {
@@ -21,13 +22,6 @@ class WohnungController extends BaseController {
     User.findByUserId(session.userId)
   }
 
-  /**
-   *
-   */
-  def getAdministrator = {
-    // Todo Administrator shall be loaded by Guest --> Wohnung --> Admin
-    User.findByUserId(ApplicationBootStrap.SUPER_ADMIN_USERNAME)
-  }
 
   def beforeInterceptor = [action: this.&auth]
 
@@ -43,13 +37,6 @@ class WohnungController extends BaseController {
     [guest: getGuest(), listOfUnconfirmedReservations: listOfUnconfirmedReservations]
   }
 
-  /**
-   * URL: http://localhost:8080/erlenrain7/wohnung/show
-   * This closure (?) is called for the show operation, see above URL
-   */
-  def show = {
-    readCalendarEntries()
-  }
 
 
 
@@ -64,9 +51,14 @@ class WohnungController extends BaseController {
     long startTime = entry.times[0].startTime.value
     // endTime in Millis
     long endTime = entry.times[0].endTime.value
-    sendConfirmationEmailFor(params.guestEmail, new Date(startTime), new Date(endTime))
-    flash['message'] = 'Reservation wurde erfolgreich bestätigt'
+    Erlenrain7Util.sendConfirmationEmailFor(params.guestEmail, new Date(startTime), new Date(endTime))
+    flash['message'] = 'Reservation wurde bestätigt -- Eine Bestätigungs-E-Mail wurde versandt.'
     redirect(action: index)
+  }
+
+  def deleteReservation = {
+
+    // todo
   }
 
 
@@ -84,22 +76,21 @@ class WohnungController extends BaseController {
 
     // make entry to calendar with status tentativly
 
-    // todo add wohnung to reservation
-    reservation = new Reservation(guest: getGuest(), startDate: startDate, endDate: endDate)
-
-    // todo check success status
+    // todo add wohnung to reservation from session info wohnungid
+    reservation = new Reservation(wohnung: Wohnung.get(1), guest: getGuest(), startDate: startDate, endDate: endDate)
 
     reservation.reserveTentatively()
+    // making a reservation sets a success code and - if they exist - existing reservations for that period
     if (!reservation.success){
       String occupiedMessage = "Reservation nicht moeglich, folgende Reservationen liegen bereits vor:  </br> \n"
       reservation.existingEvents.each {entry -> occupiedMessage = occupiedMessage + entry.getTitle().getPlainText() + " -- " + new Date(entry.times[0].startTime.value) + " bis " + new Date(entry.times[0].endTime.value) + "</br>\n"}
       flash['message'] = occupiedMessage
       redirect(action: index)
     }
-    reservation.sendEmailToWohnungAdministrator()
+    reservation.sendEmailToWohnungAdministrator(request)
 
-    // return success message
-    flash['message'] = 'Reservation wurde eingetragen. Ein Bestätigungs-E-Mail wurde verschickt.'
+    // return success message    
+    flash['message'] = 'Reservation wurde eingetragen. Du erhältst in Kürze ein Bestätigungs-E-Mail.'
 
     redirect(action: index)
 
@@ -124,40 +115,7 @@ class WohnungController extends BaseController {
 
 
 
-  /**
-   * After a tentative entry has been confirmed by an administrator, inform the guest that his reservation has been fixed.
-   */
-  void sendConfirmationEmailFor(String toAddress, java.util.Date startDate, java.util.Date endDate) {
 
-    println toAddress
-    println startDate
-    println endDate
 
-    // todo : format start and end date. use proper localisation.
-    // todo add link for changing or canceling reservation
-    def subject = "Wohnung reserviert: ${startDate} bis ${endDate}"
-    def text = "Deine Reservation vom ${startDate} bis zum ${endDate} wurde bestätigt und definitiv reserviert"
-    sendEmail(toAddress, subject, text)
-  }
 
-  /**
-   * Generic email helper for erlenrain7
-   */
-  private void sendEmail(String emailToAddress, java.lang.String subject, java.lang.String text) {
-
-    Properties props = new Properties();
-    props.put("mail.host", "localhost");
-    Session session = Session.getDefaultInstance(props, null);
-    Message message = new MimeMessage(session)
-    String messageType = "UTF-8"
-    message.setFrom(new InternetAddress("erlenrain7@gmail.com"))
-    message.setSubject(subject, messageType)
-    message.setText(text, messageType)
-    InternetAddress[] addressTo = new InternetAddress[1];
-    addressTo[0] = new InternetAddress(emailToAddress)
-    message.setRecipients(Message.RecipientType.TO, addressTo)
-    message.setHeader("Content-Type", "text/plain; charset=UTF-8");
-    javax.mail.Transport.send(message)
-
-  }
 }

@@ -10,6 +10,9 @@ import ch.unartig.erlenrain7.grails.domain.User
 import ch.unartig.erlenrain7.util.GDataHelper
 import com.google.gdata.data.calendar.CalendarEventEntry
 import com.google.gdata.data.extensions.BaseEventEntry.EventStatus
+import ch.unartig.erlenrain7.grails.domain.Wohnung
+import javax.servlet.http.HttpServletRequest
+import ch.unartig.erlenrain7.util.Erlenrain7Util
 
 /**
  * Created by IntelliJ IDEA.
@@ -27,6 +30,7 @@ public class Reservation {
   Date endDate
   String title
   User guest
+  Wohnung wohnung
   // todo make status enumeration
   boolean statusConfirmed
   // todo difference to id?
@@ -34,6 +38,8 @@ public class Reservation {
   // reservation successful? Set to true after successful reservation with calendar
   // todo maybe use status informatin like 0 = sucess, 1 = occupied, 2 = calendar not available etcetc.
   boolean success = false
+
+  // todo this doesn't belong here:
   List<CalendarEventEntry> existingEvents
 
 
@@ -94,8 +100,7 @@ public class Reservation {
 
 
     newEventEntry.setTitle(new PlainTextConstruct(this.guest.party))
-    // todo user domain object wohnung
-    newEventEntry.setContent(new PlainTextConstruct("Reservation Wohnung Engelberg von ${this.guest}"))
+    newEventEntry.setContent(new PlainTextConstruct("Reservation \"${this.wohnung}\" von ${this.guest}"))
     newEventEntry.setStatus(EventStatus.TENTATIVE)
     newEventEntry.addTime(eventTimes)
 
@@ -112,19 +117,15 @@ public class Reservation {
   /**
    * When an entry is tentativly entered into the calender, the administrator gets a notification.
    */
-  void sendEmailToWohnungAdministrator() {
-    // init sesssion
-    // todo read admin of wohnung
-//    wohnungAdmin = this.appartment.administrator
-    def confirmationUrl = "http://${request.serverName}:${request.serverPort}${request.contextPath}?userId=admin"
+  void sendEmailToWohnungAdministrator(HttpServletRequest request) {
+    User administrator = this.wohnung.administrator
+    def confirmationUrl = "http://${request.serverName}:${request.serverPort}${request.contextPath}?userId=${administrator.userId}"
     println confirmationUrl
     println("sending mail")
     String subject = "Neue Reservation für Erlenrain7"
     String messageContent = "${this.guest} hat eine neue Reservation gemacht. Bitte auf folgenden Link klicken, um die Reservation anzusehen und zu bestätigen: \n\n ${confirmationUrl}"
-
-    // todo : get admin from reservation
-    sendEmail(getAdministrator().email, subject, messageContent.toString())
-    println("sent email to ${getAdministrator().email}")
+    Erlenrain7Util.sendEmail(administrator.email, subject, messageContent.toString())
+    println("sent email to ${administrator.email}")
   }
 
   /**

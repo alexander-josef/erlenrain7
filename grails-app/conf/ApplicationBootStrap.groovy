@@ -38,6 +38,23 @@ public class ApplicationBootStrap {
             user.save()
         }
 
+
+      // create default super admin user:
+      if (!User.findByUserId(User.GUEST_USERNAME)) {
+          def guestRole = Role.findByRoleName(Role.GUEST_ROLE)
+          User guestUser = new User(userId: User.GUEST_USERNAME,
+                  firstName: "Alexnader",
+                  lastName: "Josef",
+                  email: "alexander.josef@unartig.ch",
+                  hashedPassword: "leonard",
+                  party: "Josef/Knellwolf Wil",
+                  role: guestRole
+          )
+
+          guestUser.save()
+      }
+
+
         def doelf = User.findByUserId(User.SUPER_ADMIN_USERNAME)
 
         println(doelf)
