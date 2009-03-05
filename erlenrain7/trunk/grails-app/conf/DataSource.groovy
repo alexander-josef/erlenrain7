@@ -31,8 +31,13 @@ environments {
   }
   production {
     dataSource {
+      pooled = true
+      driverClassName = "org.postgresql.Driver"
+      username = "unartig"
+      password = "unartig"
+
       dbCreate = "update"
-      url = "jdbc:hsqldb:file:prodDb;shutdown=true"
+      url = "jdbc:postgresql://localhost:5432/erlenrain7"
     }
   }
 }

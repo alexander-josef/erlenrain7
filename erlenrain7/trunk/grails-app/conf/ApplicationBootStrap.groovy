@@ -43,7 +43,7 @@ public class ApplicationBootStrap {
       if (!User.findByUserId(User.GUEST_USERNAME)) {
           def guestRole = Role.findByRoleName(Role.GUEST_ROLE)
           User guestUser = new User(userId: User.GUEST_USERNAME,
-                  firstName: "Alexnader",
+                  firstName: "Alexander",
                   lastName: "Josef",
                   email: "alexander.josef@unartig.ch",
                   hashedPassword: "leonard",

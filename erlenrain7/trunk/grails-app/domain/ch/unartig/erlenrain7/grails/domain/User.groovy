@@ -7,6 +7,12 @@ import ch.unartig.erlenrain7.grails.domain.Role
  */
 class User {
 
+  // custom mapping for user since postgresql cannot use 'user' as table name!
+  static mapping = {
+        table 'user_table'
+  }
+
+
   static String SUPER_ADMIN_USERNAME = "doelf2000"
   static String GUEST_USERNAME = "alexander.josef"
 
