@@ -77,7 +77,8 @@ class WohnungController extends BaseController {
     // make entry to calendar with status tentativly
 
     // todo wohnung needs to be read from session info wohnungid (depending on guest or guest selected wohnung)
-    reservation = new Reservation(wohnung: Wohnung.get(1), guest: getGuest(), startDate: startDate, endDate: endDate)
+    // currently the first object in the list of wohnungen gets chosen
+    reservation = new Reservation(wohnung: Wohnung.list().first(), guest: getGuest(), startDate: startDate, endDate: endDate)
 
     reservation.reserveTentatively()
     // making a reservation sets a success code and - if they exist - existing reservations for that period
