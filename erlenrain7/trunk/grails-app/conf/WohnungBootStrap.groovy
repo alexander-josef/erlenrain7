@@ -23,12 +23,6 @@ public class WohnungBootStrap {
       
       println(wohnung) 
     }
-
-//    def allAppartments = Wohnung.list()
-//
-//    allAppartments.each {it ->
-//      println(it.appartmentName)
-//    }
   }
 
   def destroy = {
