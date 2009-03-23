@@ -1,68 +1,769 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-    <channel>
-        <title>Case 10337: CD Bestellung Team 403</title>
-        <link>http://bugz.unartig.ch</link>
-        <description>FogBugz RSS Feed</description>
-        <language>en-us</language>
-        <copyright>Copyright 2000-2004 Fog Creek Software</copyright>
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/'
+      xmlns:batch='http://schemas.google.com/gdata/batch' xmlns:gCal='http://schemas.google.com/gCal/2005'
+      xmlns:gd='http://schemas.google.com/g/2005'>
+    <id>
+        http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic
+    </id>
+    <updated>2009-03-20T21:13:11.000Z</updated>
+    <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+    <title type='text'>Erlenrain 7</title>
+    <subtitle type='text'>Wohnungsbelegung Erlenrain 7 in Engelberg</subtitle>
+    <link rel='alternate' type='text/html'
+          href='http://www.google.com/calendar/embed?src=a2kndad9nrv4ceume9timpka6s@group.calendar.google.com'/>
+    <link rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml'
+          href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic'/>
+    <link rel='http://schemas.google.com/g/2005#batch' type='application/atom+xml'
+          href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/batch'/>
+    <link rel='self' type='application/atom+xml'
+          href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic?max-results=25'/>
+    <author>
+        <name>Alexander Josef</name>
+        <email>erlenrain7@unartig.ch</email>
+    </author>
+    <generator version='1.0' uri='http://www.google.com/calendar'>Google Calendar</generator>
+    <openSearch:totalResults>24</openSearch:totalResults>
+    <openSearch:startIndex>1</openSearch:startIndex>
+    <openSearch:itemsPerPage>25</openSearch:itemsPerPage>
+    <gd:where valueString='6390 Engelberg'/>
+    <gCal:timezone value='Europe/Zurich'/>
+    <gCal:timesCleaned value='0'/>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/5vopcs4gbbjdajlv30bct5lsc0
+        </id>
+        <published>2009-03-20T21:13:11.000Z</published>
+        <updated>2009-03-20T21:13:11.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Josef/Knellwolf Wil</title>
+        <summary type='html'>Wann: Do 19. M&amp;auml;r. 2009&lt;br&gt;
 
-        <item>
-            <title>Case 10337: CD Bestellung Team 403</title>
-            <link>http://bugz.unartig.ch/?10337</link>
-            <description>
-                <![CDATA[Opened<br />Bestellung von Fotos des Teams Nr. 403 (Strecke 6 nicht gefunden, 13 nur verdeckt)...<br />e01_sola08_hm_0058.jpg<br />e02_sola08_mf_0311.jpg<br />e03_sola08_sz_0319.jpg<br />e04_sola08_hm_0651.jpg<br />e04_sola08_hm_0650.jpg<br />e05_sola08_mf_0571.jpg<br />e07_sola08_th_0532.jpg<br />e08_sola08_hm_0258.jpg<br />e09_sola08_mf_0380.jpg<br />e09_sola08_mf_0381.jpg<br />e10_sola08_sz_0342.jpg<br />e11_sola08_hm_0569.jpg<br />e11_sola08_hm_0570.jpg<br />e12_sola08_mf_0473.jpg<br />e13_sola08_sz_0168.jpg<br />e14_sola08_th_0151.jpg<br /><br /><br />Hier kommen sie:<br />ETH-Bibliothek<br />Ruedi Mumenthaler<br />Spezialsammlungen<br />Rämistrasse 101<br />8092 Zürich<br /><br />Beste Grüsse<br />Ruedi Mumenthaler<br /><br /><br />]]></description>
-            <author>Alexander Josef &lt;alexander.josef@unartig.ch&gt;</author>
-            <category>FogBugzCase10337</category>
-            <guid>http://bugz.unartig.ch/default.php?pg=pgEditBug&amp;command=view&amp;ixBug=10337&amp;=#45648</guid>
-            <pubDate>22 May 08 12:45:12 GMT</pubDate>
 
-        </item>
+            &lt;br&gt;Status des Termins: vorläufig
+        </summary>
+        <content type='html'>Wann: Do 19. Mär. 2009&lt;br /&gt;
 
-        <item>
-            <title>Case 10337: CD Bestellung Team 403</title>
-            <link>http://bugz.unartig.ch/?10337</link>
-            <description><![CDATA[Assigned to Fabienne Meyer<br />]]></description>
-            <author>Alexander Josef &lt;alexander.josef@unartig.ch&gt;</author>
-            <category>FogBugzCase10337</category>
-            <guid>http://bugz.unartig.ch/default.php?pg=pgEditBug&amp;command=view&amp;ixBug=10337&amp;=#45649</guid>
-            <pubDate>22 May 08 12:45:13 GMT</pubDate>
 
-        </item>
+            &lt;br /&gt;Status des Termins: vorläufig
+            &lt;br /&gt;Terminbeschreibung: Reservation &amp;quot;ch.unartig.erlenrain7.grails.domain.Wohnung : 1&amp;quot;
+            von Doelf Josef
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=NXZvcGNzNGdiYmpkYWpsdjMwYmN0NWxzYzAgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/5vopcs4gbbjdajlv30bct5lsc0'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/ph7rbee5962setphss0bllru38
+        </id>
+        <published>2009-03-17T18:22:46.000Z</published>
+        <updated>2009-03-17T18:22:46.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Josef/Knellwolf Wil</title>
+        <summary type='html'>Wann: Mo 16. M&amp;auml;r. 2009&lt;br&gt;
 
-        <item>
-            <title>Case 10337: CD Bestellung Team 403</title>
-            <link>http://bugz.unartig.ch/?10337</link>
-            <description><![CDATA[Edited<br />CD verschickt, 23.05.08]]></description>
-            <author>Fabienne Meyer &lt;fabienne.meyer@unartig.ch&gt;</author>
-            <category>FogBugzCase10337</category>
-            <guid>http://bugz.unartig.ch/default.php?pg=pgEditBug&amp;command=view&amp;ixBug=10337&amp;=#45726</guid>
-            <pubDate>24 May 08 12:27:14 GMT</pubDate>
 
-        </item>
+            &lt;br&gt;Status des Termins: vorläufig
+        </summary>
+        <content type='html'>Wann: Mo 16. Mär. 2009&lt;br /&gt;
 
-        <item>
-            <title>Case 10337: CD Bestellung Team 403</title>
-            <link>http://bugz.unartig.ch/?10337</link>
-            <description><![CDATA[Resolved (Waiting For Info)<br />]]></description>
-            <author>Alexander Josef &lt;alexander.josef@unartig.ch&gt;</author>
-            <category>FogBugzCase10337</category>
-            <guid>http://bugz.unartig.ch/default.php?pg=pgEditBug&amp;command=view&amp;ixBug=10337&amp;=#46005</guid>
-            <pubDate>13 Jun 08 09:58:58 GMT</pubDate>
 
-        </item>
+            &lt;br /&gt;Status des Termins: vorläufig
+            &lt;br /&gt;Terminbeschreibung: Reservation &amp;quot;ch.unartig.erlenrain7.grails.domain.Wohnung : 1&amp;quot;
+            von Doelf Josef
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=cGg3cmJlZTU5NjJzZXRwaHNzMGJsbHJ1MzggYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/ph7rbee5962setphss0bllru38'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/o0744vgngabtopto0gpfbqass0
+        </id>
+        <published>2009-03-09T07:31:58.000Z</published>
+        <updated>2009-03-16T18:45:17.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'></title>
+        <summary type='html'>Wann: So 8. M&amp;auml;r. 2009 bis Sa 7. M&amp;auml;r. 2009&amp;nbsp;
 
-        <item>
-            <title>Case 10337: CD Bestellung Team 403</title>
-            <link>http://bugz.unartig.ch/?10337</link>
-            <description><![CDATA[Assigned to Fabienne Meyer<br />]]></description>
-            <author>Fabienne Meyer &lt;fabienne.meyer@unartig.ch&gt;</author>
-            <category>FogBugzCase10337</category>
-            <guid>http://bugz.unartig.ch/default.php?pg=pgEditBug&amp;command=view&amp;ixBug=10337&amp;=#46016</guid>
-            <pubDate>13 Jun 08 15:18:51 GMT</pubDate>
+            &lt;br&gt;
 
-        </item>
 
-    </channel>
-</rss>
+            &lt;br&gt;Status des Termins: vorläufig
+        </summary>
+        <content type='html'>Wann: So 8. Mär. 2009 bis Sa 7. Mär. 2009
+            &lt;br /&gt;
 
+
+            &lt;br /&gt;Status des Termins: vorläufig
+            &lt;br /&gt;Terminbeschreibung: Reservation &amp;quot;null&amp;quot; von Alexander Josef
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=bzA3NDR2Z25nYWJ0b3B0bzBncGZicWFzczAgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/o0744vgngabtopto0gpfbqass0'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/pq1ceco3pkih42bmn5l22mnhp8
+        </id>
+        <published>2009-03-09T07:38:12.000Z</published>
+        <updated>2009-03-09T07:38:12.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Josef/Knellwolf Wil</title>
+        <summary type='html'>Wann: So 8. M&amp;auml;r. 2009 bis Sa 7. M&amp;auml;r. 2009&amp;nbsp;
+
+            &lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: vorläufig
+        </summary>
+        <content type='html'>Wann: So 8. Mär. 2009 bis Sa 7. Mär. 2009
+            &lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: vorläufig
+            &lt;br /&gt;Terminbeschreibung: Reservation &amp;quot;null&amp;quot; von Alexander Josef
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=cHExY2VjbzNwa2loNDJibW41bDIybW5ocDggYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/pq1ceco3pkih42bmn5l22mnhp8'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/ultok15d1g1uc27luo4qhesq5c
+        </id>
+        <published>2009-03-03T07:05:25.000Z</published>
+        <updated>2009-03-03T07:05:25.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Josef/Knellwolf Wil</title>
+        <summary type='html'>Wann: Mo 2. M&amp;auml;r. 2009&lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: vorläufig
+        </summary>
+        <content type='html'>Wann: Mo 2. Mär. 2009&lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: vorläufig
+            &lt;br /&gt;Terminbeschreibung: Reservation &amp;quot;ch.unartig.erlenrain7.grails.domain.Wohnung : 1&amp;quot;
+            von Alexnader Josef
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=dWx0b2sxNWQxZzF1YzI3bHVvNHFoZXNxNWMgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/ultok15d1g1uc27luo4qhesq5c'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/nagm8j2fdjh923ti25jascjrgo
+        </id>
+        <published>2009-03-03T06:58:14.000Z</published>
+        <updated>2009-03-03T06:58:14.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Josef/Knellwolf Wil</title>
+        <summary type='html'>Wann: Do 5. M&amp;auml;r. 2009&lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: vorläufig
+        </summary>
+        <content type='html'>Wann: Do 5. Mär. 2009&lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: vorläufig
+            &lt;br /&gt;Terminbeschreibung: Reservation &amp;quot;ch.unartig.erlenrain7.grails.domain.Wohnung : 1&amp;quot;
+            von Alexander Josef
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=bmFnbThqMmZkamg5MjN0aTI1amFzY2pyZ28gYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/nagm8j2fdjh923ti25jascjrgo'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/vbigapcubjp4kn50bc501m7p80
+        </id>
+        <published>2009-02-18T21:28:33.000Z</published>
+        <updated>2009-03-03T06:42:50.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Josef/Knellwolf Wil(bestätigt)</title>
+        <summary type='html'>Wann: Di 17. Feb. 2009 bis Mi 25. Feb. 2009&amp;nbsp;
+
+            &lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Di 17. Feb. 2009 bis Mi 25. Feb. 2009
+            &lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: bestätigt
+            &lt;br /&gt;Terminbeschreibung: Reservation Wohnung Engelberg von Doelf Josef
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=dmJpZ2FwY3VianA0a241MGJjNTAxbTdwODAgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/vbigapcubjp4kn50bc501m7p80'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/mopda7rron1fbpbvqbmudpnt4c
+        </id>
+        <published>2009-02-19T07:00:19.000Z</published>
+        <updated>2009-03-02T17:50:29.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Josef/Knellwolf Wil(bestätigt)</title>
+        <summary type='html'>Wann: Di 24. Feb. 2009 bis Do 26. Feb. 2009&amp;nbsp;
+
+            &lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Di 24. Feb. 2009 bis Do 26. Feb. 2009
+            &lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: bestätigt
+            &lt;br /&gt;Terminbeschreibung: Reservation Wohnung Engelberg von Doelf Josef
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=bW9wZGE3cnJvbjFmYnBidnFibXVkcG50NGMgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/mopda7rron1fbpbvqbmudpnt4c'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/4ibnqeu5t9r919s2qsjfok58so
+        </id>
+        <published>2009-02-19T06:56:31.000Z</published>
+        <updated>2009-02-19T06:56:31.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Josef/Knellwolf Wil</title>
+        <summary type='html'>Wann: Do 19. Feb. 2009&lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: vorläufig
+        </summary>
+        <content type='html'>Wann: Do 19. Feb. 2009&lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: vorläufig
+            &lt;br /&gt;Terminbeschreibung: Reservation Wohnung Engelberg von Doelf Josef
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=NGlibnFldTV0OXI5MTlzMnFzamZvazU4c28gYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/4ibnqeu5t9r919s2qsjfok58so'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/90botofk2dvsunt08olrujd92k
+        </id>
+        <published>2009-02-19T06:55:55.000Z</published>
+        <updated>2009-02-19T06:55:56.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Josef/Knellwolf Wil</title>
+        <summary type='html'>Wann: Do 19. Feb. 2009&lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: vorläufig
+        </summary>
+        <content type='html'>Wann: Do 19. Feb. 2009&lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: vorläufig
+            &lt;br /&gt;Terminbeschreibung: Reservation Wohnung Engelberg von Doelf Josef
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=OTBib3RvZmsyZHZzdW50MDhvbHJ1amQ5MmsgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/90botofk2dvsunt08olrujd92k'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/r5pm669v8k90gshpt0t20ccvl0
+        </id>
+        <published>2009-01-31T09:44:42.000Z</published>
+        <updated>2009-02-05T07:22:28.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Test Entry Number one(bestätigt)</title>
+        <summary type='html'>Wann: Sa 31. Jan. 2009 09:44 bis So 1. Feb. 2009 09:44&amp;nbsp;
+            CET&lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Sa 31. Jan. 2009 09:44 bis So 1. Feb. 2009 09:44
+            CET&lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: bestätigt
+            &lt;br /&gt;Terminbeschreibung: ... some content ....
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=cjVwbTY2OXY4azkwZ3NocHQwdDIwY2N2bDAgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/r5pm669v8k90gshpt0t20ccvl0'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/1f8cs135k67kuqkspvqp0fdtts
+        </id>
+        <published>2009-01-31T22:47:07.000Z</published>
+        <updated>2009-02-05T07:22:04.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Test Entry Number one(bestätigt)</title>
+        <summary type='html'>Wann: Sa 31. Jan. 2009 22:47 bis So 1. Feb. 2009 22:47&amp;nbsp;
+            CET&lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Sa 31. Jan. 2009 22:47 bis So 1. Feb. 2009 22:47
+            CET&lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: bestätigt
+            &lt;br /&gt;Terminbeschreibung: ... some content ....
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=MWY4Y3MxMzVrNjdrdXFrc3B2cXAwZmR0dHMgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/1f8cs135k67kuqkspvqp0fdtts'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/ltup2phhj9jjol8keo5ub829pc
+        </id>
+        <published>2009-02-02T22:30:32.000Z</published>
+        <updated>2009-02-05T07:21:54.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Test Entry Number one(bestätigt)</title>
+        <summary type='html'>Wann: Mo 2. Feb. 2009 22:30 bis Di 3. Feb. 2009 22:30&amp;nbsp;
+            CET&lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Mo 2. Feb. 2009 22:30 bis Di 3. Feb. 2009 22:30
+            CET&lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: bestätigt
+            &lt;br /&gt;Terminbeschreibung: ... some content ....
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=bHR1cDJwaGhqOWpqb2w4a2VvNXViODI5cGMgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/ltup2phhj9jjol8keo5ub829pc'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/92qmc3dem9r5cfpipuv7psn2jg
+        </id>
+        <published>2009-02-03T07:12:52.000Z</published>
+        <updated>2009-02-05T07:21:39.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Test Entry Number one(bestätigt)</title>
+        <summary type='html'>Wann: Di 3. Feb. 2009 07:12 bis Mi 4. Feb. 2009 07:12&amp;nbsp;
+            CET&lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Di 3. Feb. 2009 07:12 bis Mi 4. Feb. 2009 07:12
+            CET&lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: bestätigt
+            &lt;br /&gt;Terminbeschreibung: ... some content ....
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=OTJxbWMzZGVtOXI1Y2ZwaXB1djdwc24yamcgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/92qmc3dem9r5cfpipuv7psn2jg'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/3e7vf9f5phtgsnqusb6ci9r8l8
+        </id>
+        <published>2009-02-03T07:23:09.000Z</published>
+        <updated>2009-02-05T07:21:21.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Test Entry Number one(bestätigt)</title>
+        <summary type='html'>Wann: Di 3. Feb. 2009&lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Di 3. Feb. 2009&lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: bestätigt
+            &lt;br /&gt;Terminbeschreibung: ... some content ....
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=M2U3dmY5ZjVwaHRnc25xdXNiNmNpOXI4bDggYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/3e7vf9f5phtgsnqusb6ci9r8l8'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/0kgliloc03b613gafj73ckbp74
+        </id>
+        <published>2009-02-03T17:08:50.000Z</published>
+        <updated>2009-02-05T07:15:35.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Josef/Knellwolf Wil(bestätigt)</title>
+        <summary type='html'>Wann: Mo 9. Feb. 2009 bis Sa 28. Feb. 2009&amp;nbsp;
+
+            &lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Mo 9. Feb. 2009 bis Sa 28. Feb. 2009
+            &lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: bestätigt
+            &lt;br /&gt;Terminbeschreibung: Reservation Wohnung Engelberg von Doelf Josef
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=MGtnbGlsb2MwM2I2MTNnYWZqNzNja2JwNzQgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/0kgliloc03b613gafj73ckbp74'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/ch4v0n36o70mc1jcc71nsgsqtg
+        </id>
+        <published>2009-02-03T20:58:34.000Z</published>
+        <updated>2009-02-05T07:15:29.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Josef/Knellwolf Wil(bestätigt)</title>
+        <summary type='html'>Wann: Di 3. Feb. 2009&lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Di 3. Feb. 2009&lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: bestätigt
+            &lt;br /&gt;Terminbeschreibung: Reservation Wohnung Engelberg von Doelf Josef
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=Y2g0djBuMzZvNzBtYzFqY2M3MW5zZ3NxdGcgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/ch4v0n36o70mc1jcc71nsgsqtg'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/6e9l33nl4376evl2loj59t34cs
+        </id>
+        <published>2009-02-03T20:59:08.000Z</published>
+        <updated>2009-02-05T07:15:21.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Josef/Knellwolf Wil(bestätigt)</title>
+        <summary type='html'>Wann: So 8. Feb. 2009 bis Mo 9. Feb. 2009&amp;nbsp;
+
+            &lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: So 8. Feb. 2009 bis Mo 9. Feb. 2009
+            &lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: bestätigt
+            &lt;br /&gt;Terminbeschreibung: Reservation Wohnung Engelberg von Doelf Josef
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=NmU5bDMzbmw0Mzc2ZXZsMmxvajU5dDM0Y3MgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/6e9l33nl4376evl2loj59t34cs'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/bahrufshghp93cupe8otf84f24
+        </id>
+        <published>2009-01-23T12:01:24.000Z</published>
+        <updated>2009-01-30T07:44:19.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Test Entry Number one(best�tigt)</title>
+        <summary type='html'>Wann: Fr 23. Jan. 2009 12:01 bis Sa 24. Jan. 2009 12:01&amp;nbsp;
+            CET&lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Fr 23. Jan. 2009 12:01 bis Sa 24. Jan. 2009 12:01
+            CET&lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: bestätigt
+            &lt;br /&gt;Terminbeschreibung: ... some content ....
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=YmFocnVmc2hnaHA5M2N1cGU4b3RmODRmMjQgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/bahrufshghp93cupe8otf84f24'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/29h7q2ijiedhmeiisop2behf7k
+        </id>
+        <published>2009-01-26T17:04:01.000Z</published>
+        <updated>2009-01-26T21:47:12.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Test Entry Number one(best�tigt)</title>
+        <summary type='html'>Wann: Mo 26. Jan. 2009 17:03 bis Di 27. Jan. 2009 17:03&amp;nbsp;
+            CET&lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Mo 26. Jan. 2009 17:03 bis Di 27. Jan. 2009 17:03
+            CET&lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: bestätigt
+            &lt;br /&gt;Terminbeschreibung: ... some content ....
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=MjloN3EyaWppZWRobWVpaXNvcDJiZWhmN2sgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/29h7q2ijiedhmeiisop2behf7k'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/o8lb9hqf13mu1l396s7qn74tao
+        </id>
+        <published>2009-01-22T20:28:01.000Z</published>
+        <updated>2009-01-22T20:28:01.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Test Entry Number one</title>
+        <summary type='html'>Wann: Do 22. Jan. 2009 20:27 bis Fr 23. Jan. 2009 20:27&amp;nbsp;
+            CET&lt;br&gt;
+
+
+            &lt;br&gt;Status des Termins: vorläufig
+        </summary>
+        <content type='html'>Wann: Do 22. Jan. 2009 20:27 bis Fr 23. Jan. 2009 20:27
+            CET&lt;br /&gt;
+
+
+            &lt;br /&gt;Status des Termins: vorläufig
+            &lt;br /&gt;Terminbeschreibung: ... some content ....
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=bzhsYjlocWYxM211MWwzOTZzN3FuNzR0YW8gYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/o8lb9hqf13mu1l396s7qn74tao'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/2du173aspa33pn42flqj0ad1qk
+        </id>
+        <published>2008-06-20T08:46:12.000Z</published>
+        <updated>2008-06-20T08:47:08.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>Ferien im Tessin</title>
+        <summary type='html'>Wann: Di 24. Jun. 2008 bis Do 26. Jun. 2008&amp;nbsp;
+
+            &lt;br&gt;
+            &lt;br&gt;Wer: Erlenrain 7
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Di 24. Jun. 2008 bis Do 26. Jun. 2008
+            &lt;br /&gt;
+            &lt;br /&gt;Wer: Erlenrain 7
+
+            &lt;br /&gt;Status des Termins: bestätigt
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=MmR1MTczYXNwYTMzcG40MmZscWowYWQxcWsgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/2du173aspa33pn42flqj0ad1qk'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/2u74pjunnekh8tn9kcofmigdv4
+        </id>
+        <published>2008-06-18T13:13:58.000Z</published>
+        <updated>2008-06-18T13:14:08.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>heya</title>
+        <summary type='html'>Wann: Fr 20. Jun. 2008 09:00 bis 09:30&amp;nbsp;
+            CEST&lt;br&gt;
+
+            &lt;br&gt;Wer: Erlenrain 7
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Fr 20. Jun. 2008 09:00 bis 09:30
+            CEST&lt;br /&gt;
+            &lt;br /&gt;Wer: Erlenrain 7
+
+            &lt;br /&gt;Status des Termins: bestätigt
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=MnU3NHBqdW5uZWtoOHRuOWtjb2ZtaWdkdjQgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/2u74pjunnekh8tn9kcofmigdv4'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+    <entry>
+        <id>
+            http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/a3pkoa74ff7ld27nundut6od3g
+        </id>
+        <published>2008-06-17T19:32:52.000Z</published>
+        <updated>2008-06-18T13:06:30.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+        <title type='html'>erste ferien :)</title>
+        <summary type='html'>Wann: Do 19. Jun. 2008 bis Sa 21. Jun. 2008&amp;nbsp;
+
+            &lt;br&gt;
+            &lt;br&gt;Wer: Erlenrain 7
+
+            &lt;br&gt;Status des Termins: bestätigt
+        </summary>
+        <content type='html'>Wann: Do 19. Jun. 2008 bis Sa 21. Jun. 2008
+            &lt;br /&gt;
+            &lt;br /&gt;Wer: Erlenrain 7
+
+            &lt;br /&gt;Status des Termins: bestätigt
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.google.com/calendar/event?eid=YTNwa29hNzRmZjdsZDI3bnVuZHV0Nm9kM2cgYTJrbmRhZDlucnY0Y2V1bWU5dGltcGthNnNAZw'
+              title='alternate'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://www.google.com/calendar/feeds/a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com/private-b57ffcc944be7a4db20ef2405d16dd1d/basic/a3pkoa74ff7ld27nundut6od3g'/>
+        <author>
+            <name>Alexander Josef</name>
+            <email>erlenrain7@unartig.ch</email>
+        </author>
+    </entry>
+</feed>

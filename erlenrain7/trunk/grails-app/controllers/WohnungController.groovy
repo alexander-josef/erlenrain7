@@ -13,6 +13,7 @@ import ch.unartig.erlenrain7.util.Erlenrain7Util
 
 class WohnungController extends BaseController {
 
+  // Scaffolding used for wohnungs-entries
   def scaffold = Wohnung
 
   /**
@@ -41,7 +42,8 @@ class WohnungController extends BaseController {
 
 
   /**
-   * update an entry from tentative to confirmed or delete if reservation declined
+   * Update an entry from tentative to confirmed or delete if reservation declined
+   * Accessible for Admin users only.
    */
   def update = {
     String reservationId = params.googleHref
@@ -58,7 +60,12 @@ class WohnungController extends BaseController {
 
   def deleteReservation = {
 
-    // todo
+    String reservationId = params.googleHref
+    GDataHelper.deleteEventEntry(reservationId)
+
+    flash['message'] = 'Reservation wurde gelöscht.'
+    redirect(action: index)
+
   }
 
 
@@ -73,6 +80,9 @@ class WohnungController extends BaseController {
     String endDateInput = "${params.reservationEndDate_year}/${params.reservationEndDate_month}/${params.reservationEndDate_day}"
     Date startDate = new SimpleDateFormat("yyyy/MM/dd").parse(startDateInput)
     Date endDate = new SimpleDateFormat("yyyy/MM/dd").parse(endDateInput)
+
+    log.debug("start date :" + startDate) 
+    log.debug("end date :" + endDate)
 
     // make entry to calendar with status tentativly
 
@@ -108,15 +118,6 @@ class WohnungController extends BaseController {
     def logggedInGuest = getGuest()
     listOfUnconfirmedReservations = GDataHelper.readUnconfirmedEntries(logggedInGuest)
   }
-
-
-
-
-
-
-
-
-
 
 
 }
