@@ -50,7 +50,8 @@ public class GDataHelper {
       entry.times.each {time ->
 
         println(new Date(time.startTime.value))
-        if (entry.status.equals(EventStatus.TENTATIVE)) {
+//        if (entry.status.equals(EventStatus.TENTATIVE)) {
+        if (true) { // todo replace with real if
           listOfUnconfirmedReservations.add(new Reservation(
                   guest: logggedInGuest,
                   startDate: new Date(time.startTime.value),

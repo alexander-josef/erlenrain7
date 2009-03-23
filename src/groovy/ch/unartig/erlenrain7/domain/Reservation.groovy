@@ -1,7 +1,6 @@
 package ch.unartig.erlenrain7.domain
 
 import com.google.gdata.client.calendar.CalendarService
-import com.google.gdata.data.Person
 import com.google.gdata.data.extensions.EventEntry
 import com.google.gdata.data.extensions.When
 import com.google.gdata.data.DateTime
@@ -78,22 +77,31 @@ public class Reservation {
     //
 
     // Use standard groovy magic to set the properties after construction
-    def me = new Person(name: "John Wilson", email: "tugwilson@gmail.com", uri: "http://eek.ook.org")
+//    def me = new Person(name: "John Wilson", email: "tugwilson@gmail.com", uri: "http://eek.ook.org")
 
     EventEntry newEventEntry = new EventEntry()
 
     When eventTimes = new When()
 
-    DateTime startDate = new DateTime(this.startDate)
-    DateTime endDate = new DateTime(this.endDate)
+    // todo check timezones !
+    // todo check tzshift, see api doc
+    Calendar cal = Calendar.getInstance()
+    cal.setTime(startDate)
+    cal.add(Calendar.HOUR,12)
+    DateTime startWhen = new DateTime(cal.getTime())
+    cal.setTime(endDate)
+    cal.add(Calendar.HOUR,12)
+    DateTime endWhen = new DateTime(this.endDate,cal.getTimeZone())
 
     // only the dates, no time, for all-day-event
-    startDate.setDateOnly(true)
-    endDate.setDateOnly(true
-    )
-    eventTimes.setStartTime(startDate)
-    eventTimes.setEndTime(endDate)
+    startWhen.setDateOnly(true)
+    endWhen.setDateOnly(true)
 
+    // no end time if one day event. End date optional
+    eventTimes.setStartTime(startWhen)
+    if (!startDate.equals(endDate)) {
+      eventTimes.setEndTime(endWhen)
+    }
 
     println("start of event : " + eventTimes.getStartTime())
     println("end of event : " + eventTimes.getEndTime())

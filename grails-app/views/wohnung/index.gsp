@@ -65,6 +65,7 @@
     <td>
       <h3 style="margin-left:20px;padding-bottom:10px">Aktuelle Belegung: </h3>
       %{-- erlenrain7 account : --}%
+      <!--suppress HtmlDeprecatedTag -->
       <iframe style="border:0" src="http://www.google.com/calendar/embed?src=a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com&ctz=Europe/Zurich&pvttk=b57ffcc944be7a4db20ef2405d16dd1d" width="800" height="600" frameborder="0" scrolling="no"/>
     </td>
 
