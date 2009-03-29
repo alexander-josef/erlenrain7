@@ -38,6 +38,10 @@ class WohnungController extends BaseController {
     [guest: getGuest(), listOfUnconfirmedReservations: listOfUnconfirmedReservations]
   }
 
+  def index2 = {
+    index()
+  }
+
 
 
 
@@ -55,7 +59,7 @@ class WohnungController extends BaseController {
     long endTime = entry.times[0].endTime.value
     Erlenrain7Util.sendConfirmationEmailFor(params.guestEmail, new Date(startTime), new Date(endTime))
     flash['message'] = 'Reservation wurde bestätigt -- Eine Bestätigungs-E-Mail wurde versandt.'
-    redirect(action: index)
+    redirect(action: index2)
   }
 
   def deleteReservation = {
@@ -64,7 +68,7 @@ class WohnungController extends BaseController {
     GDataHelper.deleteEventEntry(reservationId)
 
     flash['message'] = 'Reservation wurde gelöscht.'
-    redirect(action: index)
+    redirect(action: index2)
 
   }
 
@@ -103,7 +107,7 @@ class WohnungController extends BaseController {
     // return success message    
     flash['message'] = 'Reservation wurde eingetragen. Du erhältst in Kürze ein Bestätigungs-E-Mail.'
 
-    redirect(action: index)
+    redirect(action: index2)
 
 
   }
