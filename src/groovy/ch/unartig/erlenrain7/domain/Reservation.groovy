@@ -91,7 +91,7 @@ public class Reservation {
     DateTime startWhen = new DateTime(cal.getTime())
     cal.setTime(endDate)
     cal.add(Calendar.HOUR,12)
-    DateTime endWhen = new DateTime(this.endDate,cal.getTimeZone())
+    DateTime endWhen = new DateTime(cal.getTime())
 
     // only the dates, no time, for all-day-event
     startWhen.setDateOnly(true)
