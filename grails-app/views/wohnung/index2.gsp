@@ -11,13 +11,13 @@
 </div>
 <div class="clear"></div>
 
-<div class="grid_12">
 
-  <g:if test="${flash.message}">
+<g:if test="${flash.message}">
+  <div class="grid_12">
     <div class="message">${flash.message}</div>
-  </g:if>
-</div>
-<div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</g:if>
 
 
 <div class="grid_3">
@@ -61,11 +61,11 @@
         <fieldset class="login">
 
           <legend>Reservation</legend>
-            <!--TODO replace the datepicker with a calendar dhtml picker, like the one from yahoo ui (http://developer.yahoo.com/yui/calendar/) -->
+          <!--TODO replace the datepicker with a calendar dhtml picker, like the one from yahoo ui (http://developer.yahoo.com/yui/calendar/) -->
           <p>Vom <g:datePicker precision="day" name="reservationStartDate"/></p>
-           <p> Bis  <g:datePicker precision="day" name="reservationEndDate"/> </p>
-            %{-- todo also option fuer end-Datum Anzahl Tage anbieten --}%
-            <input class="button" type="submit" value="abschicken"/>
+          <p>Bis  <g:datePicker precision="day" name="reservationEndDate"/></p>
+          %{-- todo also option fuer end-Datum Anzahl Tage anbieten --}%
+          <input class="button" type="submit" value="abschicken"/>
         </fieldset>
       </g:form>
 
@@ -83,11 +83,14 @@
     <h2>Aktuelle Belegung</h2>
   </div>
   <!--suppress HtmlDeprecatedTag -->
-  <iframe style="border:0" src="http://www.google.com/calendar/embed?src=a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com&ctz=Europe/Zurich&pvttk=b57ffcc944be7a4db20ef2405d16dd1d" width="700" height="600" frameborder="0" scrolling="no"/>
+  <!--<iframe src="http://www.google.com/calendar/embed?src=a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com&ctz=Europe/Zurich&pvttk=b57ffcc944be7a4db20ef2405d16dd1d" width="700" height="500" frameborder="0" scrolling="no"/>-->
+  <object id="page" type="text/html"
+          data="http://www.google.com/calendar/embed?src=a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com&ctz=Europe/Zurich&pvttk=b57ffcc944be7a4db20ef2405d16dd1d"
+          width="700" height="500">
+    <p>Oops! That didn't work...</p>
+  </object>
 
 </div>
-
-
 <div class="clear"></div>
 
 <div class="grid_12" id="site_info">

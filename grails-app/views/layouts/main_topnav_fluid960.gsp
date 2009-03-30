@@ -21,9 +21,9 @@
   %{--<g:javascript library="application"/>--}%
 </head>
 <body>
-<div id="spinner" class="spinner" style="display:none;">
-  <img src="${createLinkTo(dir: 'images', file: 'spinner.gif')}" alt="Spinner"/>
-</div>
+%{--<div id="spinner" class="spinner" style="display:none;">--}%
+  %{--<img src="${createLinkTo(dir: 'images', file: 'spinner.gif')}" alt="Spinner"/>--}%
+%{--</div>--}%
 <div class="container_12">
 
   <div class="grid_12">
@@ -56,7 +56,6 @@
   <div class="clear"></div>
 
   <g:layoutBody/>
-
 </div>
 
 </body>
