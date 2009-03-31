@@ -12,6 +12,7 @@ import com.google.gdata.data.extensions.BaseEventEntry.EventStatus
 import ch.unartig.erlenrain7.grails.domain.Wohnung
 import javax.servlet.http.HttpServletRequest
 import ch.unartig.erlenrain7.util.Erlenrain7Util
+import sample.util.CommonUtils
 
 /**
  * Created by IntelliJ IDEA.
@@ -85,13 +86,17 @@ public class Reservation {
 
     // todo check timezones !
     // todo check tzshift, see api doc
-    Calendar cal = Calendar.getInstance()
-    cal.setTime(startDate)
-    cal.add(Calendar.HOUR,12)
-    DateTime startWhen = new DateTime(cal.getTime())
-    cal.setTime(endDate)
-    cal.add(Calendar.HOUR,12)
-    DateTime endWhen = new DateTime(cal.getTime())
+    Calendar start = Calendar.getInstance()
+    start.setTime(startDate)
+    start.add(Calendar.HOUR,12)
+    DateTime startWhen = new DateTime(start.getTime())
+
+    Calendar end = Calendar.getInstance()
+    end.setTime(endDate)
+    end.add(Calendar.HOUR,12)
+    // Google treats the endDate as exclusive!
+    end.add(Calendar.DAY_OF_MONTH,1)
+    DateTime endWhen = new DateTime(end.getTime())
 
     // only the dates, no time, for all-day-event
     startWhen.setDateOnly(true)
@@ -115,11 +120,13 @@ public class Reservation {
     // todo catch exception:
     // java.lang.IllegalStateException: g:when/@startTime must be less than or equal to g:when/@endTime.
 	// at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:92)
-    myService.insert(feedUrl, newEventEntry)
+    def result = myService.insert(feedUrl, newEventEntry)
 
     success = true;
     // todo check if logger available
     // log.info("wrote calendar entry that starts one hour from now")
+//    CommonUtils.dump(newEventEntry,System.out)
+//    CommonUtils.dump(result,System.out)
   }
 
   /**

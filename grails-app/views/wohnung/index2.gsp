@@ -21,6 +21,7 @@
 
 
 <div class="grid_3">
+
   <g:if test="${guest.userIsAdmin()}">
     <div class="box">
       <h2>Offene Reservationswuensche</h2>
@@ -38,12 +39,13 @@
       </g:each>
     </ul>
   </g:if>
+
   <div class="box">
     <h2>
-      <a href="#" id="toggle-paragraphs" class="hidden">Meine Reservationen</a>
+      <a href="#" id="toggle-myReservations">Meine Reservationen</a>
     </h2>
-    <div class="block" id="paragraphs">
-      <p>Diese Funktion ist noch nicht vorhanden.</p>
+    <div class="block" id="myReservations">
+      <p>Diese Funktion ist noch nicht vorhanden. Todo.</p>
     </div>
   </div>
 
