@@ -25,6 +25,15 @@
       <sourceFolder url="file://$MODULE_DIR$/grails-app/services" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/grails-app/taglib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/grails-app/views" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/plugins/bubbling-1.5.1/grails-app/taglib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/plugins/bubbling-1.5.1/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/plugins/calendar-1.1.1/grails-app/taglib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/plugins/grails-ui-1.0.2/grails-app/conf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/plugins/grails-ui-1.0.2/grails-app/services" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/plugins/grails-ui-1.0.2/grails-app/taglib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/plugins/grails-ui-1.0.2/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/plugins/yui-2.6.1/grails-app/taglib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/plugins/yui-2.6.1/src/groovy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/groovy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/java" isTestSource="false" />
@@ -39,12 +48,14 @@
       <library name="Grails User Library">
         <CLASSES>
           <root url="file://$MODULE_DIR$/lib" />
+          <root url="file://$MODULE_DIR$/plugins/grails-ui-1.0.2/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
           <root url="file:///opt/java/gdata/java/src" />
         </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/plugins/grails-ui-1.0.2/lib" recursive="false" />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
