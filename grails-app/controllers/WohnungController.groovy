@@ -34,7 +34,7 @@ class WohnungController extends BaseController {
    * read the calendar entries and also put the active user in the request scope
    */
   def index = {
-    readCalendarEntries()
+//    readCalendarEntries()
     [guest: getGuest(), listOfUnconfirmedReservations: listOfUnconfirmedReservations]
   }
 
