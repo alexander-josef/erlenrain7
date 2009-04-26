@@ -82,8 +82,8 @@ class WohnungController extends BaseController {
 
     String startDateInput = "${params.reservationStartDate_year}/${params.reservationStartDate_month}/${params.reservationStartDate_day}"
     String endDateInput = "${params.reservationEndDate_year}/${params.reservationEndDate_month}/${params.reservationEndDate_day}"
-    Date startDate = new SimpleDateFormat("yyyy/MM/dd").parse(startDateInput)
-    Date endDate = new SimpleDateFormat("yyyy/MM/dd").parse(endDateInput)
+    Date startDate = new SimpleDateFormat("dd/MM/yy").parse(params.startReservationDatePicker)
+    Date endDate = new SimpleDateFormat("dd/MM/yy").parse(params.endReservationDatePicker)
 
     log.debug("start date :" + startDate) 
     log.debug("end date :" + endDate)

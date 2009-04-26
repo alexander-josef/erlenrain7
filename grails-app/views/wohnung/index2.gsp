@@ -86,7 +86,7 @@
 
           <legend>Reservation</legend>
           
-          <label for="startReserverationDatePicker">Von: </label><gui:datePicker id='startReserverationDatePicker'> </gui:datePicker>
+          <label for="startReservationDatePicker">Von: </label><gui:datePicker id='startReservationDatePicker'> </gui:datePicker>
           <p><label for="endReservationDatePicker">Bis: </label><gui:datePicker id='endReservationDatePicker'> </gui:datePicker></p>
           %{-- todo also option fuer end-Datum Anzahl Tage anbieten --}%
           <br/>
