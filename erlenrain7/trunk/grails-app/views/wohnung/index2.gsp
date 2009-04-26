@@ -111,7 +111,6 @@
   </div>
   <div>
     <!--suppress HtmlDeprecatedTag -->
-<!--
     <iframe
             src="http://www.google.com/calendar/embed?src=a2kndad9nrv4ceume9timpka6s%40group.calendar.google.com&ctz=Europe/Zurich&pvttk=b57ffcc944be7a4db20ef2405d16dd1d"
             width="700"
@@ -119,8 +118,7 @@
             frameborder="0"
             scrolling="no">
     </iframe>
--->
-    %{-- closing tag needed !--}%
+    %{-- empty closing tag needed !--}%
 
   </div>
 

@@ -56,7 +56,7 @@ public class GDataHelper {
                   guest: logggedInGuest,
                   startDate: new Date(time.startTime.value),
                   title: entry.getTitle().getPlainText(),
-                  endDate: new Date(time.endTime.value),
+                  endDate: new Date(time.endTime.value) - 1, // GData defines the endDate as exclusive !!
                   id: entry.id,
                   statusConfirmed: !entry.status.equals(EventStatus.TENTATIVE),
                   entryUrl: entry.selfLink.href
