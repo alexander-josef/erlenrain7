@@ -16,10 +16,10 @@
     width: 6em;
   }
 
-%{-- the datepicker inside the fieldset is in the background ... how can we solve that? --}%
+  %{-- the datepicker inside the fieldset is in the background ... how can we solve that? --}%
 
   fieldset {
-    position:static;
+    position: static;
   }
   </style>
 
@@ -78,23 +78,24 @@
       Neue Reservationsanfrage
     </h2>
 
-    <div class="block" id="reservation" >
+    <div class="block" id="reservation">
 
       <g:form controller="wohnung" action="reserve" method="post">
 
         <fieldset>
 
           <legend>Reservation</legend>
-          
-          <label for="startReservationDatePicker">Von: </label><gui:datePicker id='startReservationDatePicker'> </gui:datePicker>
-          <p><label for="endReservationDatePicker">Bis: </label><gui:datePicker id='endReservationDatePicker'> </gui:datePicker></p>
+
+          <label for="startReservationDatePicker" style="margin-top: 18px; float:left; width: 40px;">Von:</label>
+          <gui:datePicker id='startReservationDatePicker'></gui:datePicker>
+          <label for="endReservationDatePicker" style="margin-top: 18px; float:left; width: 40px;">
+          Bis:</label><gui:datePicker id='endReservationDatePicker'></gui:datePicker>
           %{-- todo also option fuer end-Datum Anzahl Tage anbieten --}%
           <br/>
           <input class="button" type="submit" value="abschicken"/>
-        
+
         </fieldset>
       </g:form>
-
 
     </div>
   </div>
